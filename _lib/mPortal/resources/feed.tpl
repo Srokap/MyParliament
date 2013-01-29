@@ -2,11 +2,11 @@
 <rss version="2.0">
 	<channel>
 		<title>{$M.TITLE}</title>
-		<link>{$SITE_ADDRESS}{$M.LINK}</link>
+		<link>{$M.SITE_ADDRESS}{$M.LINK}</link>
 		<description>{$M.DESCRIPTION}</description>
 		<language>pl</language>
 		<image>
-       <url>{$SITE_ADDRESS}g/logo_rss.png</url>
+       <url>{$M.SITE_ADDRESS}g/logo_rss.png</url>
        <width>60</width>
        <height>49</height>
        <link>{SITE_ADDRESS}</link>

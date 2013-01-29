@@ -1,5 +1,5 @@
 <?php
-//echo $login_hash = login_hash( 'admin@ochparliament.pl', 'admin' );
+
 $auth_token = '';
 $username = '';
 $username_err = 'ok';
@@ -14,7 +14,7 @@ if( isset( $_POST['save'] ) ){
 
 
 	if( !isset( $_SESSION['mPortal']['auth_token'] ) || !isset( $_POST['auth_token'] ) || $_SESSION['mPortal']['auth_token'] != $_POST['auth_token'] ){
-		header ("Location: /zaloguj");
+		header ("Location: ".SITE_ROOT."zaloguj");
 		die();
 	} 
 	
@@ -69,21 +69,21 @@ if( isset( $_POST['save'] ) ){
 				setcookie('sm_token', $token, time()+REMEMBER_ME_SESSION_MAXLIFE, '/');
 			}		 
 			if( isset( $_SESSION['mPortal']['auth_next'] ) && $_SESSION['mPortal']['auth_next'] ){
-				header ("Location: " . $_SESSION['mPortal']['auth_next'] );
+				header ("Location: " . SITE_ROOT. $_SESSION['mPortal']['auth_next'] );
 				unset( $_SESSION['mPortal']['auth_next'] );
 			} else {
-				header ("Location: /");
+				header ("Location: " . SITE_ROOT);
 			}
 			die();
 		} elseif( !empty( $USER ) && $USER['email_verified'] == '2' ){
-			header ("Location: /zaloguj?tab=not_verified");
+			header ("Location: ".SITE_ROOT."zaloguj?tab=not_verified");
 			die();
 		} elseif( !empty( $USER ) && $USER['email_verified'] == '4' ){
 			$_SESSION['mPortal']['send_email_to'] = $USER['id'];
-			header ("Location: /zaloguj?tab=not_send");
+			header ("Location: ".SITE_ROOT."zaloguj?tab=not_send");
 			die();			
 		} elseif( !empty( $USER ) && $USER['is_active'] == '0' ){
-			header ("Location: /zaloguj?tab=inactive");
+			header ("Location: ".SITE_ROOT."zaloguj?tab=inactive");
 			die();
 		}
 		$incorrect = true;

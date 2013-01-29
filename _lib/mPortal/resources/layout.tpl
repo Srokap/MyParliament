@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html{if $M.LAYOUT ne 'blank'} style="background: url('{$SITE_ROOT}g/_page_bg_pattern.gif') repeat scroll 0 0 #EEEEEE;"{/if}>
+<html{if $M.LAYOUT ne 'blank'} style="background: url('{$M.SITE_ROOT}g/_page_bg_pattern.gif') repeat scroll 0 0 #EEEEEE;"{/if}>
   <head profile="http://www.w3.org/2005/10/profile">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     {section name="META" loop=$M.META}
@@ -11,17 +11,17 @@
     {if $M.REL.prev}<link rel="prev" href="{$M.REL.prev}" />{/if}
     {if $M.REL.next}<link rel="next" href="{$M.REL.next}" />{/if}
     
-    {if $M.FORCE_ICON}<link rel="icon" type="image/png" href="{$SITE_ROOT}g/{$M.FORCE_ICON}.png" />{else}<link rel="icon" type="image/ico" href="{$SITE_ROOT}g/sejmometr_32_tecza_s.ico" />{/if}
+    {if $M.FORCE_ICON}<link rel="icon" type="image/png" href="{$M.SITE_ROOT}g/{$M.FORCE_ICON}.png" />{else}<link rel="icon" type="image/ico" href="{$SITE_ROOT}g/sejmometr_32_tecza_s.ico" />{/if}
     
     
-    <link rel="stylesheet" href="{$SITE_ROOT}cssLibs/engine-{$M.STAMPS.engine_css}.css" type="text/css">
+    <link rel="stylesheet" href="{$M.SITE_ROOT}cssLibs/engine-{$M.STAMPS.engine_css}.css" type="text/css">
     
     {if $M.isAdmin}
-      <link rel="stylesheet" href="{$SITE_ROOT}cssLibs/engine-admin-{$M.STAMPS.engine_admin_css}.css" type="text/css">
+      <link rel="stylesheet" href="{$M.SITE_ROOT}cssLibs/engine-admin-{$M.STAMPS.engine_admin_css}.css" type="text/css">
     {/if}
     
-	  {section name=sheets loop=$M.CSSLIBS}<link rel="stylesheet" href="{$SITE_ROOT}cssLibs/{$M.CSSLIBS[sheets]}" type="text/css">{/section}
-    {if $M.cssFile}<link rel="stylesheet" href="{$SITE_ROOT}css/{$M.ID}-{$M.STAMPS.css}.css" type="text/css">{/if}
+	  {section name=sheets loop=$M.CSSLIBS}<link rel="stylesheet" href="{$M.SITE_ROOT}cssLibs/{$M.CSSLIBS[sheets]}" type="text/css">{/section}
+    {if $M.cssFile}<link rel="stylesheet" href="{$M.SITE_ROOT}css/{$M.ID}-{$M.STAMPS.css}.css" type="text/css">{/if}
     {if $M.cssInline}<style>{include file=$M.NAME|cat:"-inline.css"}</style>{/if}
     
     <!--[if IE 7]>
@@ -79,7 +79,7 @@
       {literal}
       var _FB_INIT_DATA = {
 		    appId      : '{/literal}{$M.FB_APP_ID}{literal}', // App ID
-		    channelUrl : '//{$SITE_ADDRESS}/channel.html', // Channel File
+		    channelUrl : '//{$M.SITE_ADDRESS}/channel.html', // Channel File
 		    status     : true, // check login status
 		    cookie     : true, // enable cookies to allow the server to access the session
 		    oauth      : true, // enable OAuth 2.0
@@ -99,15 +99,15 @@
       </script>
     {/if}
     
-    <script type="text/javascript" src="{$SITE_ROOT}jsLibs/engine-{$M.STAMPS.engine_js}.js"></script>
+    <script type="text/javascript" src="{$M.SITE_ROOT}jsLibs/engine-{$M.STAMPS.engine_js}.js"></script>
     {section name=EXTERNALJSSLIBS loop=$M.EXTERNALJSSLIBS}<script type="text/javascript" src="{$M.EXTERNALJSSLIBS[EXTERNALJSSLIBS]}"></script>{/section}
     
     {if $M.isAdmin}
-      <script type="text/javascript" src="{$SITE_ROOT}jsLibs/engine-admin{if $smarty.request.DONT_MINIFY neq 1}-{$M.STAMPS.engine_admin_js}{/if}.js"></script>
+      <script type="text/javascript" src="{$M.SITE_ROOT}jsLibs/engine-admin{if $smarty.request.DONT_MINIFY neq 1}-{$M.STAMPS.engine_admin_js}{/if}.js"></script>
     {/if}
     
     {section name=scripts loop=$M.JSLIBS}<script type="text/javascript" src="/jsLibs/{$M.JSLIBS[scripts]}"></script>{/section}
-    {if $M.jsFile}<script type="text/javascript" src="{$SITE_ROOT}js/{$M.ID}-{$M.STAMPS.js}.js"></script>{/if}
+    {if $M.jsFile}<script type="text/javascript" src="{$M.SITE_ROOT}js/{$M.ID}-{$M.STAMPS.js}.js"></script>{/if}
     
     <script type="text/javascript">
 			{if $M.jsInline}{include file=$M.NAME|cat:"-inline.js"}{/if}				

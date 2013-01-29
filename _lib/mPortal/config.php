@@ -2,7 +2,7 @@
 date_default_timezone_set( 'Europe/Warsaw' );
 define( 'ROOT', 'C:\work\www\OchParliament' );
 define( 'SITE_ADDRESS', 'http://localhost/OchParliament');
-define( 'SITE_ROOT', '/OchParlament/' );	
+define( 'SITE_ROOT', '/OchParliament/' );	
 
 
 define( 'MAILER_REG_SMTPAUTH', true );

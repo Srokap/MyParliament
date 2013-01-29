@@ -1,6 +1,6 @@
 <?php
 if( $this->isLogged() ) {
-	header ("Location: /");
+	header ("Location: ". SITE_ADDRESS);
 	die();
 }
 

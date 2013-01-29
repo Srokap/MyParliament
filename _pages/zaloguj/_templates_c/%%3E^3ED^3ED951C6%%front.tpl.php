@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2013-01-29 10:18:47
+<?php /* Smarty version 2.6.19, created on 2013-01-29 12:16:50
          compiled from C:%5Cwork%5Cwww%5COchParliament/_layout/front.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'cat', 'C:\\work\\www\\OchParliament/_layout/front.tpl', 2, false),array('modifier', 'truncate', 'C:\\work\\www\\OchParliament/_layout/front.tpl', 11, false),)), $this); ?>

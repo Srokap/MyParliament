@@ -5,7 +5,7 @@
   if( !$_GET['_SITEMAP_ID'] ) {
 	  
 	  header("HTTP/1.1 301 Moved Permanently");
-	  header("Location: http://sejmometr.pl/sitemap");
+	  header("Location: ". SITE_ADDRESS. "/sitemap");
 	  exit;
 	  
   }
@@ -19,7 +19,7 @@
   if( $redirection ) {
 	  
 	  header("HTTP/1.1 301 Moved Permanently");
-	  $url = "http://sejmometr.pl/sitemap/".$redirection;
+	  $url = SITE_ADDRESS . "/sitemap/".$redirection;
 	  
 	  if( $_GET['_OFFSET'] )
 		  $url .= '-'.$_GET['_OFFSET'];

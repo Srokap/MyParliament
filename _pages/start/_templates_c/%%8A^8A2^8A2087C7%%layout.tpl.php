@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2013-01-29 10:29:19
+<?php /* Smarty version 2.6.19, created on 2013-01-29 12:22:01
          compiled from C:%5Cwork%5Cwww%5COchParliament/_lib/mPortal/resources/layout.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'C:\\work\\www\\OchParliament/_lib/mPortal/resources/layout.tpl', 9, false),array('modifier', 'strip_tags', 'C:\\work\\www\\OchParliament/_lib/mPortal/resources/layout.tpl', 12, false),array('modifier', 'cat', 'C:\\work\\www\\OchParliament/_lib/mPortal/resources/layout.tpl', 27, false),array('modifier', 'default', 'C:\\work\\www\\OchParliament/_lib/mPortal/resources/layout.tpl', 98, false),)), $this); ?>
@@ -6,7 +6,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'C
  version="1.0" encoding="utf-8"<?php echo '?>'; ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html<?php if ($this->_tpl_vars['M']['LAYOUT'] != 'blank'): ?> style="background: url('<?php echo $this->_tpl_vars['SITE_ROOT']; ?>
+<html<?php if ($this->_tpl_vars['M']['LAYOUT'] != 'blank'): ?> style="background: url('<?php echo $this->_tpl_vars['M']['SITE_ROOT']; ?>
 g/_page_bg_pattern.gif') repeat scroll 0 0 #EEEEEE;"<?php endif; ?>>
   <head profile="http://www.w3.org/2005/10/profile">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -48,18 +48,18 @@ $this->_sections['META']['last']       = ($this->_sections['META']['iteration'] 
     <?php if ($this->_tpl_vars['M']['REL']['next']): ?><link rel="next" href="<?php echo $this->_tpl_vars['M']['REL']['next']; ?>
 " /><?php endif; ?>
     
-    <?php if ($this->_tpl_vars['M']['FORCE_ICON']): ?><link rel="icon" type="image/png" href="<?php echo $this->_tpl_vars['SITE_ROOT']; ?>
+    <?php if ($this->_tpl_vars['M']['FORCE_ICON']): ?><link rel="icon" type="image/png" href="<?php echo $this->_tpl_vars['M']['SITE_ROOT']; ?>
 g/<?php echo $this->_tpl_vars['M']['FORCE_ICON']; ?>
 .png" /><?php else: ?><link rel="icon" type="image/ico" href="<?php echo $this->_tpl_vars['SITE_ROOT']; ?>
 g/sejmometr_32_tecza_s.ico" /><?php endif; ?>
     
     
-    <link rel="stylesheet" href="<?php echo $this->_tpl_vars['SITE_ROOT']; ?>
+    <link rel="stylesheet" href="<?php echo $this->_tpl_vars['M']['SITE_ROOT']; ?>
 cssLibs/engine-<?php echo $this->_tpl_vars['M']['STAMPS']['engine_css']; ?>
 .css" type="text/css">
     
     <?php if ($this->_tpl_vars['M']['isAdmin']): ?>
-      <link rel="stylesheet" href="<?php echo $this->_tpl_vars['SITE_ROOT']; ?>
+      <link rel="stylesheet" href="<?php echo $this->_tpl_vars['M']['SITE_ROOT']; ?>
 cssLibs/engine-admin-<?php echo $this->_tpl_vars['M']['STAMPS']['engine_admin_css']; ?>
 .css" type="text/css">
     <?php endif; ?>
@@ -87,10 +87,10 @@ $this->_sections['sheets']['index_prev'] = $this->_sections['sheets']['index'] -
 $this->_sections['sheets']['index_next'] = $this->_sections['sheets']['index'] + $this->_sections['sheets']['step'];
 $this->_sections['sheets']['first']      = ($this->_sections['sheets']['iteration'] == 1);
 $this->_sections['sheets']['last']       = ($this->_sections['sheets']['iteration'] == $this->_sections['sheets']['total']);
-?><link rel="stylesheet" href="<?php echo $this->_tpl_vars['SITE_ROOT']; ?>
+?><link rel="stylesheet" href="<?php echo $this->_tpl_vars['M']['SITE_ROOT']; ?>
 cssLibs/<?php echo $this->_tpl_vars['M']['CSSLIBS'][$this->_sections['sheets']['index']]; ?>
 " type="text/css"><?php endfor; endif; ?>
-    <?php if ($this->_tpl_vars['M']['cssFile']): ?><link rel="stylesheet" href="<?php echo $this->_tpl_vars['SITE_ROOT']; ?>
+    <?php if ($this->_tpl_vars['M']['cssFile']): ?><link rel="stylesheet" href="<?php echo $this->_tpl_vars['M']['SITE_ROOT']; ?>
 css/<?php echo $this->_tpl_vars['M']['ID']; ?>
 -<?php echo $this->_tpl_vars['M']['STAMPS']['css']; ?>
 .css" type="text/css"><?php endif; ?>
@@ -195,7 +195,7 @@ unset($_smarty_tpl_vars);
 		    appId      : \''; ?>
 <?php echo $this->_tpl_vars['M']['FB_APP_ID']; ?>
 <?php echo '\', // App ID
-		    channelUrl : \'//{$SITE_ADDRESS}/channel.html\', // Channel File
+		    channelUrl : \'//{$M.SITE_ADDRESS}/channel.html\', // Channel File
 		    status     : true, // check login status
 		    cookie     : true, // enable cookies to allow the server to access the session
 		    oauth      : true, // enable OAuth 2.0
@@ -226,7 +226,7 @@ unset($_smarty_tpl_vars);
       </script>
     <?php endif; ?>
     
-    <script type="text/javascript" src="<?php echo $this->_tpl_vars['SITE_ROOT']; ?>
+    <script type="text/javascript" src="<?php echo $this->_tpl_vars['M']['SITE_ROOT']; ?>
 jsLibs/engine-<?php echo $this->_tpl_vars['M']['STAMPS']['engine_js']; ?>
 .js"></script>
     <?php unset($this->_sections['EXTERNALJSSLIBS']);
@@ -256,7 +256,7 @@ $this->_sections['EXTERNALJSSLIBS']['last']       = ($this->_sections['EXTERNALJ
 "></script><?php endfor; endif; ?>
     
     <?php if ($this->_tpl_vars['M']['isAdmin']): ?>
-      <script type="text/javascript" src="<?php echo $this->_tpl_vars['SITE_ROOT']; ?>
+      <script type="text/javascript" src="<?php echo $this->_tpl_vars['M']['SITE_ROOT']; ?>
 jsLibs/engine-admin<?php if ($_REQUEST['DONT_MINIFY'] != 1): ?>-<?php echo $this->_tpl_vars['M']['STAMPS']['engine_admin_js']; ?>
 <?php endif; ?>.js"></script>
     <?php endif; ?>
@@ -286,7 +286,7 @@ $this->_sections['scripts']['first']      = ($this->_sections['scripts']['iterat
 $this->_sections['scripts']['last']       = ($this->_sections['scripts']['iteration'] == $this->_sections['scripts']['total']);
 ?><script type="text/javascript" src="/jsLibs/<?php echo $this->_tpl_vars['M']['JSLIBS'][$this->_sections['scripts']['index']]; ?>
 "></script><?php endfor; endif; ?>
-    <?php if ($this->_tpl_vars['M']['jsFile']): ?><script type="text/javascript" src="<?php echo $this->_tpl_vars['SITE_ROOT']; ?>
+    <?php if ($this->_tpl_vars['M']['jsFile']): ?><script type="text/javascript" src="<?php echo $this->_tpl_vars['M']['SITE_ROOT']; ?>
 js/<?php echo $this->_tpl_vars['M']['ID']; ?>
 -<?php echo $this->_tpl_vars['M']['STAMPS']['js']; ?>
 .js"></script><?php endif; ?>

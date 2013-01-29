@@ -283,9 +283,9 @@ input.s_text_input {border: 1px solid #777777;
 .s_preheader_div input.s_text_input {padding: 1px 26px 1px 5px;}
     
 .s_fb_icon {background: url("../g/facebook_icon.gif") no-repeat 0 0 transparent; width: 22px; height: 22px; margin-top: 1px;}
-.s_sejmometr_icon_div {margin-left: 10px; width: 129px; height: 20px; padding: 0 2px; position: relative; top: 7px; float: left;}
-.s_sejmometr_icon_div a {outline: none;}
-.s_sejmometr_icon {background: url("../g/mlogo.png") no-repeat 0 0 transparent; width: 129px; height: 20px; outline: none;}
+.s_ochparliament_icon_div {margin-left: 10px; width: 129px; height: 20px; padding: 0 2px; position: relative; top: 7px; float: left;}
+.s_ochparliament_icon_div a {outline: none;}
+.s_ochparliament_icon_div {background: url("../g/mlogo.png") no-repeat 0 0 transparent; width: 129px; height: 20px; outline: none;}
 
 
 

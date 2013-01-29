@@ -21,7 +21,7 @@
 	              <div style="font-size: 12px;">
 		              <div style="margin-bottom: 5px;">Witaj {$USER.name},</div>
 		              <div>
-		                <p>Aby dokończyć rejestrację na portalu OchParliament przejdź na stronę <a href="#" style="text-decoration: none; color: #0083B8;">{$SITE_ADDRESS}start</a> i wklej poniższy kod do formularza <span style="color: #777;">(musisz być zalogowan{if $USER.plec eq "female"}a{else}y{/if})</span>:</p>
+		                <p>Aby dokończyć rejestrację na portalu OchParliament przejdź na stronę <a href="#" style="text-decoration: none; color: #0083B8;">{$M.SITE_ADDRESS}start</a> i wklej poniższy kod do formularza <span style="color: #777;">(musisz być zalogowan{if $USER.plec eq "female"}a{else}y{/if})</span>:</p>
 		              </div>
 		              <div style="margin: 10px; overflow: auto; font-size: 17px; color: #555;">
 		                <p>{$USER.email_pass}</p>

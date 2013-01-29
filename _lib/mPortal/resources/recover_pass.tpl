@@ -13,7 +13,7 @@
           <table cellpadding="0" cellspacing="0" border="0" width="620">
             <tr>
               <td style="background: #4e769e; color: #FFFFFF; font-weight: bold; font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; padding: 4px 8px; vertical-align: middle; font-size: 16px; letter-spacing: -0.03em; text-align: left;">
-                <a style="color:#FFFFFF; text-decoration: none;" href="{$SITE_ADDRESS}"><span style="color:#FFFFFF">OchParliament</span></a>
+                <a style="color:#FFFFFF; text-decoration: none;" href="{$M.SITE_ADDRESS}"><span style="color:#FFFFFF">OchParliament</span></a>
               </td>
             </tr>
             <tr>
