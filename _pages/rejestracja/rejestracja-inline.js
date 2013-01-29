@@ -1,0 +1,1 @@
+{if $aktualnosci.glosowania_data}var _glosowania_data = {$aktualnosci.glosowania_data|@json_encode};{/if}

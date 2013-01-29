@@ -1,0 +1,590 @@
+.s_browser_data_channels_ul {overflow: auto; background-color: #CCC;}
+.s_browser_data_channels_ul a:hover {text-decoration: none;}
+.s_browser_data_channels_ul li {font-size: 13px; float: left; padding-right: 1px;}
+.s_browser_data_channels_ul li:last-child {padding-right: 0;}
+.s_browser_data_channels_ul li a.mBtn {border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; background: #EEE; color: #352D7D; text-shadow: none;}
+.s_browser_data_channels_ul li a.mBtn.selected {background: #717EA0; color: #FFF;}
+body._layout_new .s_browser_data_channels_ul li a.mBtn.selected {
+background-image: linear-gradient(top, rgb(65,142,196) 0%, rgb(51,112,156) 100%);
+background-image: -o-linear-gradient(top, rgb(65,142,196) 0%, rgb(51,112,156) 100%);
+background-image: -moz-linear-gradient(top, rgb(65,142,196) 0%, rgb(51,112,156) 100%);
+background-image: -webkit-linear-gradient(top, rgb(65,142,196) 0%, rgb(51,112,156) 100%);
+background-image: -ms-linear-gradient(top, rgb(65,142,196) 0%, rgb(51,112,156) 100%);
+  background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, rgb(65,142,196)),
+	color-stop(1, rgb(51,112,156))
+); color: #FFF;}
+
+.s_browser_data_channels_ul li a.mBtn.browse i {background-position: -135px -97px;}
+.s_browser_data_channels_ul li a.mBtn.selected.browse i {background-position: -135px -117px;}
+
+.s_browser_filtry_ul_cont {margin-top: 5px;}
+.s_browser_filtry_ul_results {}
+.s_browser_filtry_ul_cont .filter_div.visible.first {margin-top: 0;}
+.s_browser_filtry_ul_cont .filter_div {margin-top: 25px; display: none;}
+.s_browser_filtry_ul_cont .filter_div.visible {display: block;}
+
+.s_browser_data_channels_ul li a.mBtn.api i {background-position: -96px -160px;}
+.s_browser_data_channels_ul li a.mBtn.selected.api i {background-position: -96px -180px;}
+
+
+.s_browser_data_channels_ul li a.mBtn.rss i {background-position: -116px -160px;}
+.s_browser_data_channels_ul li a.mBtn.selected.rss i {background-position: -116px -180px;}
+
+
+
+body._layout_new .s_browser {margin: 0 !important;}
+.s_browser h1 {font-size: 22px; padding: 0 5px; font-weight: normal; display: inline;}
+.s_browser h2 {font-size: 13px; font-weight: normal; background-color: #F3F3F3; padding: 5px; margin-top: 20px;}
+.s_browser h3 {color: #999999;
+    font-size: 10px;
+    font-weight: bold; margin: 7px 0; text-transform: uppercase;}
+.s_browser h3.first {margin-top: 7px;}
+
+
+.s_browser_title_container {overflow: auto; margin-left: 10px; border-bottom: 1px solid #919EC0; margin-bottom: 10px;}
+.s_browser_title_container p {display: inline;}
+
+.s_browser_counter {padding: 15px 20px;}
+.s_browser_pagination {overflow: auto; padding: 10px 20px; height: 18px;}
+.s_browser_pagination.upper {padding-bottom: 15px;}
+.s_browser_pagination.lower {padding: 30px 0 !important;}
+.s_browser_pagination_ul {display: block; text-align: center;}
+.s_browser_pagination_ul li {display: inline;}
+.s_browser_pagination_ul li a {display: inline; outline: none; padding: 3px 6px; margin: 0 2px;}
+.s_browser_pagination_ul li a:hover {background-color: #F3F3F3; text-decoration: none;}
+.s_browser_pagination_ul li.s a {color: #FFF; background-color: #3D81EE;
+background-image: linear-gradient(top, #3D81EE 0%, #3777DD 100%);
+background-image: -o-linear-gradient(top, #3D81EE 0%, #3777DD 100%);
+background-image: -moz-linear-gradient(top, #3D81EE 0%, #3777DD 100%);
+background-image: -webkit-linear-gradient(top, #3D81EE 0%, #3777DD 100%);
+background-image: -ms-linear-gradient(top, #3D81EE 0%, #3777DD 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #3D81EE),
+	color-stop(1, #3777DD)
+);
+border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;}
+
+.s_browser_pagination_ul li img {background: url("/g/sejmometr_main_sprite_01.png") repeat scroll 0 0 transparent; width: 6px; height: 9px;}
+.s_browser_pagination_ul li.first img {background-position: -19px -1px; width: 8px;}
+.s_browser_pagination_ul li.prev img {background-position: -27px -1px;}
+.s_browser_pagination_ul li.next img {background-position: -43px -1px;}
+.s_browser_pagination_ul li.last img {background-position: -34px -1px; width: 8px;}
+
+
+
+.s_browser_filter_legend {color: #999; padding: 5px;}
+.s_browser_filtry_ul {}
+.s_browser_filtry_ul input.s_text_input {border-color: #BBBBBB;
+    color: #666666;
+    font-size: 13px;
+    padding: 0 5px;
+    width: 90px;}
+
+.s_browser_filtry_ul li {padding: 0 10px !important; font-size: 12px;}
+.s_browser_filtry_ul li ul li {padding: 3px 0 !important; font-size: 13px;}
+.s_browser_filtry_ul li ul li a {}
+.s_browser_mbtn {font-size: 11px;}
+.s_browser_mbtn.soft {background: none; border: none; color: #006398; text-shadow: none; padding: 5px !important; margin: 0 !important; color: #444;}
+
+.s_browser_filtry_ul li ul li a.pad {padding: 7px 10px;}
+.s_browser_filtry_ul li ul li a .container_div {overflow: auto;}
+.s_browser_filtry_ul li ul li a .avatar_div {float: left; margin-right: 8px;}
+.s_browser_filtry_ul li ul li a .content_div {}
+.s_browser_filtry_ul li ul li a .content_div .title {}
+.s_browser_filtry_ul li ul li a .stats {color: #555; font-size: 12px; margin-top: 2px;}
+
+
+
+
+.s_browser_filtry_ul li ul li a.selected {background-color: #F7FF00;
+	background-image: linear-gradient(top, #F7FF00 0%, #FFD500 100%);
+	background-image: -o-linear-gradient(top, #F7FF00 0%, #FFD500 100%);
+	background-image: -moz-linear-gradient(top, #F7FF00 0%, #FFD500 100%);
+	background-image: -webkit-linear-gradient(top, #F7FF00 0%, #FFD500 100%);
+	background-image: -ms-linear-gradient(top, #F7FF00 0%, #FFD500 100%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #F7FF00),
+		color-stop(1, #FFD500)
+	);
+    color: #222;
+    margin: 5px;
+    outline: medium none;
+    padding: 2px 10px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; display: block; text-decoration: none; border: 1px solid #CAA;}
+.s_browser_filtry_ul li ul li a.selected i {display: block; width: 13px; height: 16px; background: url("/g/sejmometr_main_sprite_01.png") repeat scroll -67px 0 transparent; float: right; margin-left: 7px;}
+.s_browser_filtry_ul li ul li a.selected span.fname {color: #333;}
+
+
+
+
+
+.s_browser_filtry_ul li ul li a span.fcount {color: #777; font-size: 11px;}
+.s_browser_filtry_ul li ul li a span.fcount b {color: #777;}
+.s_browser_filtry_ul li a {padding: 2px 10px; display: block; outline: none;}
+.s_browser_filtry_ul li a span {color: #777;}
+.s_browser_filtry_ul li a b {font-weight: normal; color: #444;}
+
+.s_browser_filtry_ul li .mBtn {margin: 5px; padding: 3px 10px;}
+
+
+.s_browser_k_ul {min-height: 40px;}
+.s_browser_k_ul .s_text_input {border-color: #BBBBBB;
+    color: #666666;
+    font-size: 14px;
+    padding: 2px 5px;
+    width: 300px; margin: 0 12px;}
+.s_browser_k_ul li.main {padding: 0;}
+.s_browser_k_ul li {padding: 5px;}
+.s_browser_k_ul li ul li {padding: 5px 10px;}
+.s_browser_k_ul li a {background-color: #717EA0;
+    color: #FFFFFF;
+    margin: 5px;
+    outline: medium none;
+    padding: 2px 10px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; display: inline-block; text-decoration: none;}
+.s_browser_k_ul li a span {}
+.s_browser_k_ul li a i {display: block; width: 12px; height: 16px; background: url("/g/sejmometr_main_sprite_01.png") repeat scroll -54px 0 transparent; float: right; margin-left: 7px;}
+
+
+
+
+
+
+
+.s_browser_order {padding: 0 15px !important; overflow: inherit !important; height: inherit !important; margin-bottom: 20px; margin-top: 5px;}
+.s_browser_order select {font-size: 12px; padding: 2px 5px; color: #444; margin-right: 5px;}
+.s_browser_cont_div {overflow: auto;}
+.s_brwoser_main_div {float: inherit !important; width: inherit !important;}
+.s_browser_side_div {margin: 0 !important; padding: 0 !important;}
+.s_browser_side_div h2 {
+		font-size: 16px;
+    padding: 5px 15px;
+    margin-top: 0;
+    overflow: auto;
+    cursor: pointer;
+}
+.s_browser_side_div .filter_div h2 i {display: block; width: 11px; height: 12px; float: left; background: url("/g/arrows.png") repeat scroll 0 0 transparent; position: relative; top: 2px; margin-right: 5px;}
+.s_browser_side_div .filter_div h2:hover {color: #006398;}
+.s_browser_side_div .filter_div h2:hover i {background-position: -22px 0;}
+.s_browser_side_div .filter_div.expanded h2 i {background-position: -11px 0;}
+.s_browser_side_div .filter_div.expanded h2:hover i {background-position: -33px 0;}
+
+
+
+.object_tab_content.minimal .s_browser_bar {display: none;}
+.object_tab_content.minimal .s_browser_pagination {display: none;}
+
+.s_browser_results_ul {}
+.s_browser_results_ul li.ep_Object {background-color: #FFF; padding: 30px 20px !important; margin: 0 !important;}
+.s_browser_results_ul li.ep_Object {border: 1px solid #DDD; border-style: solid none;}
+
+
+.s_browser_results_ul.mini.side {}
+.s_browser_results_ul.mini.side li.ep_Object {padding: 10px !important; margin: 10px !important; background-color: #FFF !important; overflow: auto; border-top: 1px solid #E3E3E3; box-shadow: 0 0 3px #DDD; -webkit-box-shadow: 0 0 3px #DDD; border-bottom-right-radius: 8px; -webkit-border-bottom-right-radius: 8px;}
+
+.s_browser_results_ul.mini.side li.ep_Object:first-child {border-top: none !important;}
+.s_browser_results_ul.mini.side li.ep_Object:last-child {}
+.s_browser_results_ul.nocoloring li.ep_Object.odd {background-color: inherit !important;}
+.ep_Object_cont_div .s_browser_bar {background-color: #FFF; width: 725px; padding-right: 0;}
+
+
+
+
+.s_browser_filters_cont {overflow: auto; background-color: #F3F3F3;}
+.s_browser_cont {width: 725px; float: left; background-color: #FFF; min-height: 547px;}
+.s_filters_cont {margin-left: 725px; padding-top: 10px; background-color: #F3F3F3;}
+body._layout_new.bc .s_main_content_container .s_column_main_right {width: 1074px !important;}
+body._layout_new .s_browser_side_div {margin: 0; padding: 0;}
+
+
+
+
+
+
+
+
+
+.s_browser_results_ul .ep_Object {overflow: auto; box-shadow: 0 50px 50px -50px #F3F3F3 inset; -webkit-box-shadow: 0 50px 50px -50px #F3F3F3 inset; -o-box-shadow: 0 50px 50px -50px #F3F3F3 inset; -moz-box-shadow: 0 50px 50px -50px #F3F3F3 inset;}
+.s_browser_results_ul .ep_Object .li_inner_content {}
+
+.s_browser_results_ul .ep_Object .li_inner_controlls {float: right; margin-top: -30px; position: relative; top: 7px; z-index: 1;}
+.page_ep_Object .li_inner_controlls {margin-top: -3px;}
+.page_ep_Object .s_browser {margin-top: 10px;}
+
+.ep_Object._date .li_inner_date {float: left; width: 52px;}
+.ep_Object._date .li_inner_content {margin-left: 52px;}
+
+.li_inner_controlls ul {}
+.li_inner_controlls ul li {padding: 3px; margin: 0 5px; float: left; overflow: auto; cursor: pointer;}
+.li_inner_controlls ul li:first-child {margin-left: 0;}
+.li_inner_controlls ul li:last-child {margin-right: 0;}
+
+.page_ep_Object .li_inner_controlls ul li {float: right;}
+.page_ep_Object .li_inner_controlls ul li:first-child {margin-right: 0;}
+.page_ep_Object .li_inner_controlls ul li:last-child {margin-left: 0;}
+
+
+.li_inner_controlls ul li i {background: url("/g/sejmometr_main_sprite_01.png") repeat scroll 0 0 transparent; display: block; float: left; width: 16px; height: 16px;}
+.li_inner_controlls ul li span {display: block; color: #b3b3b3;}
+.li_inner_controlls ul li:hover span {color: #352D7D;}
+
+.li_inner_controlls ul li.kolekcje i {background-position: 0 -80px; width: 13px;}
+.li_inner_controlls ul li.kolekcje:hover i {background-position: 0 -100px;}
+
+.li_inner_controlls ul li.share i {background-position: -36px -80px;}
+.li_inner_controlls ul li.share:hover i {background-position: -36px -100px;}
+
+.li_inner_controlls ul li.tagi i {background-position: -57px -80px;}
+.li_inner_controlls ul li.tagi:hover i {background-position: -57px -100px;}
+
+.li_inner_controlls ul li.kolekcje span {margin-left: 19px;}
+.li_inner_controlls ul li.tagi span {margin-left: 22px;}
+.li_inner_controlls ul li.share span {margin-left: 22px;}
+
+
+
+.s_browser_results_ul .ep_Object .li_inner_controlls {display: none;}
+.s_browser_results_ul .ep_Object:hover .li_inner_controlls {display: block;}
+.s_browser .noresults {color: #CCCCCC;
+    font-size: 30px;
+    margin-top: 50px;
+    text-align: center;}
+
+
+
+
+.s_browser_results_ul .ep_Object .label {font-size: 13px;}
+.s_browser_results_ul .ep_Object .tytul {font-size: 15px; line-height: 20px; padding: 5px;}
+.s_browser_results_ul.mini.side .ep_Object .tytul {font-size: 13px; line-height: 18px; padding: 3px;}
+.s_browser_results_ul .ep_Object .nazwa {font-size: 16px; line-height: 20px;}
+.s_browser_results_ul .ep_Object .meta {margin-top: 7px;}
+.s_browser_results_ul .ep_Object .desc {padding: 5px; margin-top: 15px; font-size: 12px;}
+.s_browser_results_ul .ep_Object .desc .avatar_div {float: left; width: 46px;}
+.s_browser_results_ul .ep_Object .desc .content_div {margin-left: 46px;}
+.s_browser_results_ul .ep_Object .desc p {padding: 0;}
+.s_browser_results_ul .ep_Object .desc p .l {color: #777; font-size: 11px;}
+.s_browser_results_ul .ep_Object .desc p .v {margin-left: 5px; font-size: 12px;}
+.s_browser_results_ul .ep_Object .desc p.smaller .v {font-size: 12px;}
+.s_browser_results_ul .ep_Object .big_title {font-size: 14px; line-height: 22px; margin: 10px;}
+
+.s_browser_results_ul .ep_SA_Orzeczenie .tytul {font-size: 20px; margin-top: 5px;}
+.s_browser_results_ul .ep_SP_Orzeczenie .tytul {font-size: 20px; margin-top: 5px;}
+.s_browser_results_ul .ep_SN_Orzeczenie .tytul {font-size: 20px; margin-top: 5px;}
+
+
+
+
+.s_browser_results_ul .ep_Sejm_Druk {}
+.s_browser_results_ul .ep_Sejm_Druk .img_div {float: left; width: 104px; height: 129px; text-align: center;}
+.s_browser_results_ul .ep_Sejm_Druk .content_div {margin-left: 111px; min-height: 129px;}
+.s_browser_results_ul .ep_Sejm_Druk .content_div .numer {font-size: 13px;}
+.s_browser_results_ul .ep_Sejm_Druk .content_div .numer b {font-size: 12px;}
+.s_browser_results_ul .ep_Sejm_Druk .content_div .data {font-size: 12px; color: #777;}
+.s_browser_results_ul.mini.side .ep_Sejm_Druk .img_div {width: 80px; min-height: 97px; height: inherit;}
+.s_browser_results_ul.mini.side .ep_Sejm_Druk .content_div {margin-left: 90px; min-height: 97px;}
+
+.s_browser_results_ul .ep_Sejm_Wniesiony_Projekt {}
+.s_browser_results_ul .ep_Sejm_Wniesiony_Projekt .img_div {float: left; width: 104px; height: 129px; text-align: center;}
+.s_browser_results_ul .ep_Sejm_Wniesiony_Projekt .content_div {margin-left: 111px; min-height: 129px;}
+.s_browser_results_ul .ep_Sejm_Wniesiony_Projekt .content_div .numer {font-size: 13px;}
+.s_browser_results_ul .ep_Sejm_Wniesiony_Projekt .content_div .numer b {font-size: 12px;}
+.s_browser_results_ul .ep_Sejm_Wniesiony_Projekt .content_div .data {font-size: 12px; color: #777;}
+
+
+
+.s_browser_results_ul .ep_Object .ep_Ustawa .tytul {font-size: 16px; margin-top: 1px;}
+
+.s_browser_results_ul .ep_Senat_Druk {}
+.s_browser_results_ul .ep_Senat_Druk .img_div {float: left; width: 104px; height: 129px; text-align: center;}
+.s_browser_results_ul .ep_Senat_Druk .content_div {margin-left: 111px; min-height: 129px;}
+.s_browser_results_ul .ep_Senat_Druk .content_div .numer {font-size: 13px;}
+.s_browser_results_ul .ep_Senat_Druk .content_div .numer b {font-size: 12px;}
+.s_browser_results_ul .ep_Senat_Druk .content_div .data {font-size: 12px; color: #777;}
+
+
+.s_browser_results_ul .ep_RCL_Projekt {}
+.s_browser_results_ul .ep_RCL_Projekt .img_div {float: left; width: 104px; height: 129px; text-align: center;}
+.s_browser_results_ul .ep_RCL_Projekt .content_div {margin-left: 111px; min-height: 129px;}
+.s_browser_results_ul .ep_RCL_Projekt .opis {margin-bottom: 10px;}
+
+.s_browser_results_ul .ep_Legislacja_Projekt .desc {}
+.s_browser_results_ul .ep_Legislacja_Projekt .tytul {font-size: 16px; line-height: 23px; margin-bottom: 5px;}
+.s_browser_results_ul .ep_Legislacja_Projekt .status {font-size: 13px; margin-bottom: 10px; color: #999;}
+.s_browser_results_ul .ep_Legislacja_Projekt .opis {font-size: 13px; line-height: 20px;}
+
+.s_browser_results_ul .ep_NIK_Raport {}
+.s_browser_results_ul .ep_NIK_Raport .img_div {float: left; width: 104px; height: 129px; text-align: center;}
+.s_browser_results_ul .ep_NIK_Raport .content_div {margin-left: 111px; min-height: 129px;}
+.s_browser_results_ul .ep_NIK_Raport .content_div .numer {font-size: 13px;}
+.s_browser_results_ul .ep_NIK_Raport .content_div .numer b {font-size: 12px;}
+.s_browser_results_ul .ep_NIK_Raport .content_div .data {font-size: 12px; color: #777;}
+
+
+.s_browser_results_ul .ep_ISAP_Plik {}
+.s_browser_results_ul .ep_ISAP_Plik .img_div {float: left; width: 104px; height: 129px; text-align: center;}
+.s_browser_results_ul .ep_ISAP_Plik .content_div {margin-left: 111px; min-height: 129px;}
+.s_browser_results_ul .ep_ISAP_Plik .content_div .numer {font-size: 13px;}
+.s_browser_results_ul .ep_ISAP_Plik .content_div .numer b {font-size: 12px;}
+.s_browser_results_ul .ep_ISAP_Plik .content_div .data {font-size: 12px; color: #777;}
+
+
+
+.s_browser_results_ul .ep_Posel {}
+.s_browser_results_ul .ep_Posel .img_div {float: left; width: 104px; height: 132px; text-align: center;}
+.s_browser_results_ul .ep_Posel .img_div img {width: 102px; height: 130px; border: 1px solid #DDD; -moz-border-radius: 3px; border-radius: 3px; -webkit-border-radius: 3px;}
+.s_browser_results_ul .ep_Posel .content_div {margin-left: 127px; min-height: 139px;}
+.s_browser_results_ul .ep_Posel .content_div .nazwa {font-size: 16px;}
+.s_browser_results_ul .ep_Posel .content_div .avatar_cont {width: 45px; float: left;}
+.s_browser_results_ul .ep_Posel .content_div .cont_cont {margin-left: 45px;}
+.s_browser_results_ul .ep_Posel .content_div .cont_cont .desc {margin: 0;}
+
+
+.s_browser_results_ul .ep_Posel_Komisja_Stanowisko {}
+.s_browser_results_ul .ep_Posel_Komisja_Stanowisko .img_div {float: left; width: 104px; height: 132px; text-align: center;}
+.s_browser_results_ul .ep_Posel_Komisja_Stanowisko .img_div img {width: 102px; height: 130px; border: 1px solid #DDD; -moz-border-radius: 3px; border-radius: 3px; -webkit-border-radius: 3px;}
+.s_browser_results_ul .ep_Posel_Komisja_Stanowisko .content_div {margin-left: 127px; min-height: 139px;}
+.s_browser_results_ul .ep_Posel_Komisja_Stanowisko .content_div .nazwa {font-size: 16px;}
+.s_browser_results_ul .ep_Posel_Komisja_Stanowisko .content_div .avatar_cont {width: 45px; float: left;}
+.s_browser_results_ul .ep_Posel_Komisja_Stanowisko .content_div .cont_cont {margin-left: 45px;}
+.s_browser_results_ul .ep_Posel_Komisja_Stanowisko .content_div .cont_cont .desc {margin: 0;}
+
+
+
+.s_browser_results_ul .ep_Sejm_Klub {}
+.s_browser_results_ul .ep_Sejm_Klub .img_div {float: left; width: 140px; text-align: center;}
+.s_browser_results_ul .ep_Sejm_Klub .img_div img {}
+.s_browser_results_ul .ep_Sejm_Klub .content_div {margin-left: 155px; min-height: 70px;}
+
+
+.s_browser_results_ul .ep_Sejm_Komisja {min-height: 50px;}
+.s_browser_results_ul .ep_Sejm_Komisja .nazwa {font-size: 14px;}
+
+
+body._layout_new.bc .s_main_content_container .s_column_main_right {width: 675px; padding: 0;}
+.s_browser_pagination {padding: 15px 10px 10px !important;}
+
+
+.s_browser_results_ul .ep_Posel_Komisja_Stanowisko {min-height: 50px;}
+.s_browser_results_ul .ep_Posel_Komisja_Stanowisko .nazwa {font-size: 14px;}
+
+
+
+.s_browser_results_ul .ep_Sejm_Posiedzenie {min-height: 50px;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie .opis {margin-bottom: 10px;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie .tytul {font-size: 20px;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie .tytul span {font-size: 13px; color: #666; margin-left: 7px;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie .zapowiedz {text-align: center; font-size: 16px; color: #999;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie.img .img_div {float: left; width: 165px;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie.img .img_div img {}
+.s_browser_results_ul .ep_Sejm_Posiedzenie.img .content_div {margin-left: 165px; min-height: 133px;}
+
+.s_browser_results_ul .ep_Sejm_Komunikat {min-height: 50px;}
+.s_browser_results_ul .ep_Sejm_Komunikat .opis {margin-bottom: 10px;}
+.s_browser_results_ul .ep_Sejm_Komunikat .tytul {font-size: 18px; line-height: 22px;}
+.s_browser_results_ul .ep_Sejm_Komunikat .label span {font-size: 12px; color: #666; margin-left: 10px;}
+.s_browser_results_ul .ep_Sejm_Komunikat.img .img_div {float: left; width: 165px;}
+.s_browser_results_ul .ep_Sejm_Komunikat.img .img_div img {}
+.s_browser_results_ul .ep_Sejm_Komunikat.img .content_div {margin-left: 165px; min-height: 133px;}
+
+
+
+.s_browser_results_ul .ep_Legislacja_Projekt {}
+.s_browser_results_ul .ep_Legislacja_Projekt .img_div {float: left; width: 104px; height: 129px; text-align: center;}
+.s_browser_results_ul .ep_Legislacja_Projekt .content_div {margin-left: 111px; min-height: 129px;}
+.s_browser_results_ul .ep_Legislacja_Projekt .content_div .data {font-size: 12px; color: #777;}
+
+
+
+
+
+.s_browser_results_ul .ep_Twitt {}
+.s_browser_results_ul .ep_Twitt .twitt_html {font-size: 14px; line-height: 22px; margin: 10px;}
+.s_browser_results_ul .ep_Twitt .img_div {float: left; width: 52px;text-align: center;}
+.s_browser_results_ul .ep_Twitt .img_div img {width: 50px; height: 50px; border: 1px solid #DDD; -moz-border-radius: 3px; border-radius: 3px; -webkit-border-radius: 3px;}
+.s_browser_results_ul .ep_Twitt .content_div {margin-left: 60px; min-height: 50px;}
+.s_browser_results_ul .ep_Twitt .created_at {font-size: 12px; margin-left: 10px;}
+
+
+
+.s_browser_results_ul .ep_Prawo {}
+.s_browser_results_ul .ep_Prawo .img_div {float: left; width: 104px; height: 129px; text-align: center;}
+.s_browser_results_ul .ep_Prawo .content_div {margin-left: 111px; min-height: 129px;}
+.s_browser_results_ul .ep_Prawo .content_div .label {font-size: 13px;}
+.s_browser_results_ul .ep_Prawo .content_div .label ._tn {font-weight: bold;}
+.s_browser_results_ul .ep_Prawo .content_div .tytul {font-size: 15px; margin: 5px; line-height: 20px;}
+
+.s_browser_results_ul .ep_Gmina {}
+.s_browser_results_ul .ep_Gmina .img_div {float: left; width: 104px; height: 129px; text-align: center;}
+.s_browser_results_ul .ep_Gmina.img .content_div {margin-left: 111px; min-height: 129px;}
+.s_browser_results_ul .ep_Gmina .content_div .label {font-size: 13px;}
+.s_browser_results_ul .ep_Gmina .content_div .label ._tn {font-weight: bold;}
+.s_browser_results_ul .ep_Gmina .content_div .tytul {font-size: 18px; margin: 5px; line-height: 20px;}
+.s_browser_results_ul .ep_Gmina .content_div .tytul span {font-size: 12px; color: #777; margin-left: 10px;}
+.s_browser_results_ul.mini .ep_Gmina .tytul span {color: #999999; font-size: 12px; margin-left: 10px;}
+
+
+.s_browser_results_ul .ep_Sejm_Pytanie_Biezace {}
+.s_browser_results_ul .ep_Sejm_Pytanie_Biezace .img_div {float: left; width: 150px; height: 90px;}
+.s_browser_results_ul .ep_Sejm_Pytanie_Biezace .img_div img {width: 140px; height: 80px;}
+.s_browser_results_ul .ep_Sejm_Pytanie_Biezace .content_div {margin-left: 155px; min-height: 90px;}
+
+
+.s_browser_results_ul .ep_Sejm_Wystapienie {}
+.s_browser_results_ul .ep_Sejm_Wystapienie .quote_p {padding: 5px;}
+.s_browser_results_ul .ep_Sejm_Wystapienie .quote_p .qstart {color: #CCC;
+    font-size: 35px;
+    position: absolute;
+    margin-top: 6px;}
+.s_browser_results_ul .ep_Sejm_Wystapienie .quote_p .qcontent {font-size: 14px; line-height: 21px; margin: 0 5px 0 15px;}
+.s_browser_results_ul .ep_Sejm_Wystapienie .quote_p .qstop {color: #CCC;
+    font-size: 35px;
+    position: absolute;
+    margin-top: 6px;}
+.s_browser_results_ul .ep_Sejm_Wystapienie .quote_p .qlink {margin-left: 15px;}
+
+.s_browser_results_ul .ep_Sejm_Wystapienie .img_div {float: left; width: 56px; height: 56px;}
+.s_browser_results_ul .ep_Sejm_Wystapienie .img_div img {width: 50px; height: 50px;}
+.s_browser_results_ul .ep_Sejm_Wystapienie .content_div {margin-left: 65px; min-height: 52px;}
+
+.s_browser_results_ul .ep_Sejm_Wystapienie.v .img_div {width: 130px; height: 102px;}
+.s_browser_results_ul .ep_Sejm_Wystapienie.v .img_div img {width: 124px; height: 93px;}
+.s_browser_results_ul .ep_Sejm_Wystapienie.v .content_div {margin-left: 140px; min-height: 102px;}
+
+.s_browser_results_ul .ep_Sejm_Wystapienie .label {font-size: 12px; line-height: 21px;}
+.s_browser_results_ul .ep_Sejm_Wystapienie .label span.stanowisko {color: #888;}
+
+
+
+
+
+.s_browser_results_ul .ep_Senat_Wystapienie {}
+.s_browser_results_ul .ep_Senat_Wystapienie .img_div {float: left; width: 56px; height: 56px;}
+.s_browser_results_ul .ep_Senat_Wystapienie .img_div img {width: 50px; height: 50px;}
+.s_browser_results_ul .ep_Senat_Wystapienie .content_div {margin-left: 65px; min-height: 52px;}
+
+.s_browser_results_ul .ep_Senat_Wystapienie.v .img_div {width: 130px; height: 102px;}
+.s_browser_results_ul .ep_Senat_Wystapienie.v .img_div img {width: 124px; height: 93px;}
+.s_browser_results_ul .ep_Senat_Wystapienie.v .content_div {margin-left: 140px; min-height: 102px;}
+
+.s_browser_results_ul .ep_Senat_Wystapienie .label {font-size: 12px; line-height: 21px;}
+.s_browser_results_ul .ep_Senat_Wystapienie .label span.stanowisko {color: #888;}
+
+
+
+.s_browser_results_ul .ep_Sejm_Posiedzenie_Punkt {}
+.s_browser_results_ul .ep_Sejm_Posiedzenie_Punkt .inner {margin-top: 5px;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie_Punkt .img_div {float: left; width: 128px; height: 97px;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie_Punkt .img_div img {width: 124px; height: 93px; border: 1px solid #DDD; padding: 1px;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie_Punkt .content_div {margin-left: 139px; min-height: 97px;}
+
+
+.s_browser_results_ul .ep_Sejm_Posiedzenie_Debata {}
+.s_browser_results_ul .ep_Sejm_Posiedzenie_Debata .inner {margin-top: 5px;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie_Debata .img_div {float: left; width: 128px; height: 97px; margin-right: 10px;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie_Debata .img_div img {width: 124px; height: 93px; border: 1px solid #DDD; padding: 1px;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie_Debata .content_div {margin-left: 139px; min-height: 97px;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie_Debata .timing_div {float: left; width: 130px;}
+.s_browser_results_ul .ep_Sejm_Posiedzenie_Debata .timing {font-family: monospace;}
+.s_browser_results_ul.mini .ep_Sejm_Posiedzenie_Debata .tytul span.tm {margin-left: 10px;}
+
+
+.s_browser_results_ul .ep_Sejm_Dzien .cal_div {float: left; width: 57px;}
+.s_browser_results_ul .ep_Sejm_Dzien .content_div {margin-left: 57px;}
+.s_browser_results_ul .ep_Sejm_Dzien .content_div .tytul {padding: 0;}
+.s_browser_results_ul .ep_Sejm_Dzien .posiedzenie {padding: 5px;}
+.s_browser_results_ul.mini.side .ep_Sejm_Dzien .desc {padding: 3px;}
+.s_browser_results_ul.mini.side .ep_Sejm_Dzien .desc {margin-top: 0; font-size: 11px; color: #666;}
+.s_browser_results_ul.mini.side .ep_Sejm_Dzien .tytul {font-size: 16px;}
+.s_browser_results_ul.mini.side .ep_Sejm_Dzien .tytul span {font-size: 12px; margin-left: 5px;}
+
+
+
+
+
+.s_browser_results_ul .ep_Sejm_Glosowanie {}
+.s_browser_results_ul .ep_Sejm_Glosowanie .content_div .tytul {}
+
+
+.s_browser_results_ul .ep_Posel_Glos {}
+.s_browser_results_ul .ep_Posel_Glos .img_div {float: right; width: 150px; height: 150px; text-align: center;}
+.s_browser_results_ul .ep_Posel_Glos .img_div p {color: #FFF; text-align: center; padding: 5px 0; margin-top: 20px;}
+.s_browser_results_ul .ep_Posel_Glos .img_div .z {background-color: #109618;}
+.s_browser_results_ul .ep_Posel_Glos .img_div .p {background-color: #DC3912;}
+.s_browser_results_ul .ep_Posel_Glos .img_div .w {background-color: #3366CC;}
+.s_browser_results_ul .ep_Posel_Glos .img_div .n {background-color: #888;}
+.s_browser_results_ul .ep_Posel_Glos .content_div {margin-right: 160px; min-height: 150px;}
+.s_browser_results_ul .ep_Posel_Glos .content_div .label {}
+.s_browser_results_ul .ep_Posel_Glos .content_div .tytul {}
+
+
+.s_browser_results_ul .ep_Glosowanie_Sejmowe_Glos {}
+.s_browser_results_ul .ep_Glosowanie_Sejmowe_Glos .img_div {float: right; width: 150px; text-align: center;}
+.s_browser_results_ul .ep_Glosowanie_Sejmowe_Glos .img_div p {color: #FFF; text-align: center; padding: 5px 0; margin-top: 20px;}
+.s_browser_results_ul .ep_Glosowanie_Sejmowe_Glos .img_div .z {background-color: #109618;}
+.s_browser_results_ul .ep_Glosowanie_Sejmowe_Glos .img_div .p {background-color: #DC3912;}
+.s_browser_results_ul .ep_Glosowanie_Sejmowe_Glos .img_div .w {background-color: #3366CC;}
+.s_browser_results_ul .ep_Glosowanie_Sejmowe_Glos .img_div .n {background-color: #888;}
+.s_browser_results_ul .ep_Glosowanie_Sejmowe_Glos .content_div {margin-right: 160px;}
+.s_browser_results_ul .ep_Glosowanie_Sejmowe_Glos .content_div .label {}
+.s_browser_results_ul .ep_Glosowanie_Sejmowe_Glos .content_div .tytul {}
+.s_browser_results_ul .ep_Glosowanie_Sejmowe_Glos .content_div .imgs {min-height: 52px; padding: 10px;}
+.s_browser_results_ul .ep_Glosowanie_Sejmowe_Glos .pimg_div {float: left; width: 52px; height: 52px; text-align: center; margin-right: 5px;}
+.s_browser_results_ul .ep_Glosowanie_Sejmowe_Glos .pimg_div img {width: 50px; height: 50px; border: 1px solid #DDD; -moz-border-radius: 3px; border-radius: 3px; -webkit-border-radius: 3px;}
+
+.s_browser_results_ul .ep__Dataset {}
+.s_browser_results_ul .ep__Dataset .nazwa {font-size: 18px;}
+.s_browser_results_ul .ep__Dataset .base_alias {color: #999; padding: 5px;}
+.s_browser_results_ul .ep__Dataset .desc {line-height: 18px; font-size: 13px; margin: 5px 0;}
+.s_browser_results_ul .ep__Dataset .desc p {padding: 5px;}
+.s_browser_results_ul .ep__Dataset .zrodlo {font-size: 11px; padding: 5px;}
+.s_browser_results_ul .ep__Dataset .buttons_ul {margin-top: 10px;}
+.s_browser_results_ul .ep__Dataset .buttons_ul ul {}
+.s_browser_results_ul .ep__Dataset .buttons_ul ul li {float: left; padding: 0 15px;}
+
+
+
+.s_browser.mini.dni_sejmowe .s_browser_results_ul li.ep_Object {padding: 10px !important;}
+._minibrowser.dni {}
+._minibrowser.dni .s_browser_results_ul.mini li.ep_Object {background: inherit !important; box-shadow: none !important; -webkit-box-shadow: none !important; margin: 0 !important;}
+._minibrowser.dni .s_browser_results_ul.mini .ep_Sejm_Dzien .desc {margin-top: 0; font-size: 11px; color: #666; padding: 0 !important;}
+.s_browser_results_ul.mini .ep_Sejm_Dzien .tytul span {visibility: hidden;}
+
+
+
+.s_btn_tooltip {position: absolute; background-color: #FEFEFE; width: 150px; border: 2px solid #4c9fe6; margin-left: -165px; box-shadow: -1px 1px 5px #CCC; -moz-box-shadow: -1px 1px 5px #CCC; -webkit-box-shadow: -1px 1px 8px #CCC;}
+
+
+.s_browser_inner {padding: 10px; line-height: 19px;}
+.s_browser_inner p {padding: 5px;}
+input.copy_content_input {color: #666666;
+    font-size: 14px;
+    margin: 10px;
+    padding: 5px;
+    width: 300px;}
+.s_browser_inner.api i {font-weight: bold;}
+.s_browser_inner.rss {text-align: center;}
+
+.s_browser .performance_stats {font-family: monospace; text-align: center; padding: 10px; font-size: 12px; color: #AAA;}
+
+
+
+._s_browser ._performance {font-family: monospace; background-color: #000; color: #0F0; padding: 10px;}
+._s_browser ._performance ul {}
+._s_browser ._performance ul li {overflow: auto; padding: 3px;}
+._s_browser ._performance ul li .l {width: 250px; text-align: right; float: left;}
+._s_browser ._performance ul li .v {margin-left: 260px;}
+
+
+
+
+

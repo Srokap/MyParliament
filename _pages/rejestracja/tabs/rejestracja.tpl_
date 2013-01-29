@@ -1,0 +1,142 @@
+{if $M.isLogged}
+
+<div id="main_div">
+	<div id="content">	
+		<h2 class="first">Rejestracja</h2>
+		<div class="p bigger">
+		  <p>Jesteś już zalogowany. Aby zarejestrować nowe konto musisz się wylogować.</p>
+		  <p><a href="/logout?next={$smarty.server.REQUEST_URI}" class="_LOGOUT_BTN _BTN blue">Wyloguj się &raquo;</a></p>
+		</div>
+  </div>
+</div>
+
+{else}
+<script>
+  _fbOnLoginRedirection = 'start';
+</script>
+<div id="main_div">
+	<div id="content">	
+		<h2 class="first">Rejestracja</h2>
+		<div class="p bigger">
+		  <p>Zarejestruj się i zacznij dodawać posłów do Twojej osobistej listy obserowanych posłów. Po rejestracji, na stronie Twojego konta znajdziesz strumień aktywności wszystkich obserwowanych przez Ciebie posłów, a także będziesz otrzymywać powiadomienia o ich działaniach.
+		  </p>
+		  <p>
+		    Rejestracja w portalu jest darmowa. Sejmometr nie wyświetla reklam i nie wysyła spamu.
+		  </p>
+		</div>
+	
+	
+	
+		<h3>Masz konto Facebook?</h3>
+		<div class="p">
+		  <p>Zaloguj się za pomocą swojego konta Facebook.</p>
+		  <p id="fb_login_button_cont"><fb:login-button size="large" perms="email" onlogin="window._fbOnLogin();"></p>
+		</div>
+		
+		
+		<h3>Jeśli nie masz konta Facebook, wypełnij poniższy formularz:</h3>
+		
+		
+		<div id="reg_table_cont">
+		  <form id="reg_form" onsubmit="return false;">
+				<table id="reg_table">
+				  
+				  <tr class="email preinfo">
+				    <td class="l">Adres email:</td>
+				    <td class="v input_txt_cont"><input type="text" name="email" class="txt" value="" /></td>
+				  </tr>
+				  <tr class="info">
+				    <td class="l">&nbsp;</td>
+				    <td class="v">
+				      <p class="emsg">Podaj poprawny adres email</p>
+				      <p>Twój adres będzie używany do logowania</p>
+				    </td>
+				  </tr>
+				  
+				  <tr class="pass preinfo">
+				    <td class="l">Hasło:</td>
+				    <td class="v input_txt_cont"><input type="password" name="pass" class="txt" value="" autocomplete="off" /></td>
+				  </tr>
+				  <tr class="info">
+				    <td class="l"></td>
+				    <td class="v">
+				      <p class="emsg">Hasło musi mieć conajmniej 4 znaki</p>
+				    </td>
+				  </tr>
+				  
+				  <tr class="preinfo">
+				    <td class="l">Nazwa użytkownika:</td>
+				    <td class="v input_txt_cont"><input type="text" name="name" class="txt" value="" /></td>
+				  </tr>
+				  
+				  <tr class="info">
+				    <td class="l">&nbsp;</td>
+				    <td class="v">
+				      <p><b>[pole opcjonalne]</b> Podaj imię i nazwisko lub nazwę instytucji</p>
+				    </td>
+				  </tr>
+				  
+				  
+				  
+				  
+				  
+				  <tr>
+				    <td colspan="2" class="calign">&nbsp;</td>
+				  </tr>
+				  
+				  
+				  <tr class="preinfo">
+				    <td class="l">Kod pocztowy:</td>
+				    <td class="v">
+				      <input id="kod_input" type="text" name="postal_code" class="kod" value="" />
+				      <div id="kod_choices" class="autocomplete" style="display: none;"></div>
+				    </td>
+				  </tr>
+				  
+				  <tr class="info">
+				    <td class="l">&nbsp;</td>
+				    <td class="v">
+				      <p><b>[pole opcjonalne]</b> Podaj swój kod pocztowy, aby Sejmometr eksponował treści pochodzące od posłów z Twojego Regionu</p>
+				    </td>
+				  </tr>
+				  
+				  <tr class="bd preinfo">
+				    <td class="l">Data urodzin:</td>
+				    <td class="v">{html_select_date name="bd" field_order="DMY" start_year="-100" year_empty="Rok" month_empty="Miesiąc" day_empty="Dzień" time="0000-00-00" reverse_years=true day_format="%02d"}</td>
+				  </tr>
+				  <tr class="info">
+				    <td class="l"></td>
+				    <td class="v">
+				      <p class="emsg">Podaj poprawną datę urodzin</p>
+				    </td>
+				  </tr>
+				  
+				  <tr class="gender preinfo">
+				    <td class="l">Płeć:</td>
+				    <td class="v">{html_radios name='gender' options=$rejestracja.genders}</td>
+				  </tr>
+				  <tr class="info">
+				    <td class="l"></td>
+				    <td class="v">
+				      <p class="emsg">Podaj płeć</p>
+				    </td>
+				  </tr>
+				</table>
+			</form>
+			
+			<p class="calign">
+			  <a class="_BTN orange" id="reg_submit" href="#" onclick="return false;">Dalej &raquo;</a>
+			</p>
+		</div>
+	
+  </div>
+	
+</div>
+
+<div id="side_div">
+  <div class="fb"><fb:like-box href="http://www.facebook.com/sejmometr" width="292" show_faces="true" stream="false" header="false"></fb:like-box></div>
+  
+  
+    
+</div>
+{/if}

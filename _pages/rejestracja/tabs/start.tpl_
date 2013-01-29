@@ -1,0 +1,124 @@
+<div id="main_div">
+	<div id="content">
+
+    {if $M.USER.email_verified eq '2'}
+		<div id="email_ver_div">
+			<h2>Potwierdź swój adres email:</h2>
+			<div class="p bigger">
+			  <p>Na adres email, który {if $M.USER.gender eq 'female'}podałaś{else}podałeś{/if} w rejestracji wysłaliśmy wiadomość zawierającą specjalny kod. Skopiuj ten kod z emaila, wklej w poniższe pole i kliknij przycisk "Potwierdź":</p>
+			  <div class="input_cont" id="email_ver_cont">
+			    <input type="text" id="email_ver_input" class="mInput" maxlength="10" />
+			    <p id="email_ver_status">&nbsp;</p>
+			  </div>
+			  <p><a class="_BTN orange" href="#" id="email_ver_btn" onclick="return false;">Potwierdź &raquo;</a></p>
+			  <p class="smaller">
+			    Jeśli nie dostałeś od nas emaila z kodem weryfikacyjnym sprawdź swój folder spamu. Jeśli dalej nie widzisz naszego emaila - <a href="mailto:redakcja@sejmometr.pl">skontaktuj się z nami</a>.
+			  </p>
+			</div>
+		</div>
+		{/if}
+		
+		
+		
+		
+		<h2 class="first">Witaj na portalu Sejmometr!</h2>
+		<div class="p bigger">
+			<p>Sejmometr powstał, aby umożliwić łatwy i przyjazny sposób przeglądania informacji o pracach Sejmu. Sejm Rzeczypospolitej Polskiej to miejsce kształtowania prawa w Polsce. Składa się z 460 <a href="/poslowie">posłów</a>, którzy zgłaszają propozycje zmian przepisów, obradują i głosują nad projektami ustaw, uchwał i wniosków.</p>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		{if !$M.isLogged}
+		<h2><a href="/start/rejestracja">Zarejestruj się!</a></h2>
+		<div class="p bigger">
+		  <p>Chcesz śledzić działania interesujących Cię posłów? <a href="/start/rejestracja">Zarejestruj się</a> i zacznij dodawać posłów do Twojej osobistej listy obserowanych posłów. Po rejestracji, na stronie Twojego konta znajdziesz strumień aktywności wszystkich obserwowanych przez Ciebie posłów, a także będziesz otrzymywać powiadomienia o ich działaniach.
+		  </p>
+		  <p>
+		    Rejestracja w portalu jest darmowa. Sejmometr nie wyświetla reklam i nie wysyła spamu.
+		  </p>
+		  <p><a href="/start/rejestracja">Zarejestruj się &raquo;</a></p>
+		</div>
+		{/if}
+		
+		
+		
+		
+		
+		<h2>Działy Sejmometru:</h2>
+		<div class="p">
+		  
+		  <div id="demo">
+		    
+		    <div class="d">
+		      <h3><a href="/posiedzenia">Posiedzenia</a></h3>
+		      <p>Zobacz jakie projekty były rozpatrywane, o czym debatowano, jakie wytworzyły się koalicje i kto był nieobecny na ostatnim posiedzeniu. <a href="/posiedzenia">Przejdź &raquo;</a></p>
+		    </div>
+		    
+		    <div class="d">
+		      <h3><a href="/posiedzenia">Posłowie i kluby</a></h3>
+		      <p>Sprawdź kto jest Twoim reprezentantem w Sejmie. Podaj swój kod pocztowy lub nazwę miejscowości, aby otrzymać listę posłów z Twojego regionu. <a href="/poslowie">Przejdź &raquo;</a></p>
+		    </div>
+		    
+		    <div class="d">
+		      <h3><a href="/druki">Druki</a></h3>
+		      <p>Przeglądaj projekty ustaw, uchwał i innych aktów prawnych, nad którymi pracuje Sejm. <a href="/projekty">Przejdź &raquo;</a></p>
+		    </div>
+		    
+		    <!--
+		    <div class="d">
+		      <h3><a href="/projekty">Statystyki</a></h3>
+		      <p class="last">Który poseł mówi najwięcej, a który składa najwięcej projektów?. <a href="/statystyki">Przejdź &raquo;</a></p>
+		    </div>
+		    -->
+		    
+		  </div>
+		  
+	  </div>
+		
+		
+		
+		
+		
+		
+	</div>
+	
+	
+</div>
+
+<div id="side_div">
+  <div class="fb"><fb:like-box href="http://www.facebook.com/sejmometr" width="292" show_faces="true" stream="false" header="false"></fb:like-box></div>
+  
+  <!--     
+  <div class="headerbox">
+    <p class="label">Posiedzenia</p>
+  </div>
+  <div class="ostatnie_posiedzenie">
+	  <p>Ostatnie posiedzenie Sejmu nr <b>{$start.posiedzenie.numer}</b> odbyło się w dniach <b>{$start.posiedzenie.data_tytul}</b></p>
+	  <p><a href="/posiedzenia/{$start.posiedzenie.id}">Zobacz szczegóły &raquo;</a></p>
+  </div>
+  
+  <div class="headerbox">
+    <p class="label">Najnowsze projekty w Sejmie:</p>
+  </div>
+  <ul class="projekty">{section name="projekty" loop=$start.projekty}{assign var="p" value=$start.projekty[projekty]}
+	  <li class="p">
+	    <a title="{$p.opis}" href="/projekt/{$p.id},{$p.url_title}"><img src="/d/2/{$p.dokument_id}.gif" /></a>
+	    <div class="c">
+		    <p class="tytul"><a title="{$p.opis}" href="/projekt/{$p.id},{$p.url_title}">{$p.tytul}</a></p>
+		    <div class="autorstatus">
+		      <p><span class="label">Autor:</span> <span class="a">{$p.autor}</span></p>
+		      <p><span class="label">Status:</span> {$p.status_slowny}</p>
+		    </div>
+	    </div>
+	  </li>
+	{/section}</ul>
+	<p class="wiecej">
+	  <a href="/projekty">Wszystkie projekty &raquo;</a>
+	</p>
+	-->
+  
+</div>

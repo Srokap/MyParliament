@@ -1,0 +1,37 @@
+.recover_container{
+	width: 650px;
+	margin: 0px auto;
+	padding: 20px 0px;
+}
+
+
+.recover_container p{
+	padding-bottom: 10px;
+}
+
+.recover_container p label{
+	width: 120px;
+	float: left;
+	display: block;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.recover_container input[type="submit"]{
+	margin-left: 130px;
+}
+
+.recover_container input[type="text"], .register_container input[type="password"]{
+	width: 200px;
+}
+
+.recover_container form{
+	margin: 25px auto;
+}
+.recover_container span{
+	display: none;
+}
+
+.recover_container span.active{
+	display: inline;
+}

@@ -1,0 +1,145 @@
+._obj_cont_div {overflow: hidden;}
+._obj_cont_div ._obj_main_div {margin-right: 250px; background-color: #FFF; min-height: 520px; overflow: hidden;}
+._obj_cont_div ._obj_side_div {float: right; width: 250px;}
+
+._obj_cont_div h2 {border: none; padding: 10px; margin: 0; font-size: 18px; margin-top: 10px; margin-bottom: 5px;}
+
+
+
+
+._obj_cont_div h2:first-child {margin-top: 0;}
+._obj_cont_div .src {padding: 20px; font-size: 11px;}
+._obj_cont_div .src a {color: #666;}
+
+
+._obj_cont_div ._obj_side_div h2 {margin-top: 40px; padding: 0 10px;}
+._obj_cont_div ._obj_side_div h2:first-child {margin-top: 0; padding-top: 0;}
+
+
+
+._obj_cont_div ._obj_main_div_a {float: left; width: 550px; background-color: #FFF; min-height: 520px; overflow: hidden;}
+._obj_cont_div ._obj_side_div_a {margin-left: 550px; background-color: #F3F3F3; min-height: 514px;}
+
+
+
+
+.s_column_main_right {padding-left: 15px;}
+.page_ep_Object .preheader {overflow: auto;}
+.page_ep_Object h1 {padding: 20px; color: #444; font-size: 21px; line-height: 28px;}
+.page_ep_Object.bc h1 {padding-top: 5px;}
+.page_ep_Object .header {border-bottom: none; padding: 0;}
+.page_ep_Object._tabs .preheader {padding-right: 170px;}
+.page_ep_Object._tabs .header {padding-right: 180px;}
+.page_ep_Object .promo_display {padding: 5px 10px;}
+
+.ep_Object_cont_div {overflow: auto; background-color: #F3F3F3;}
+.ep_Object_main_div {width: 660px; float: left; min-height: 350px; padding-bottom: 40px;}
+.ep_Object_side_div {margin-left: 675px;}
+.ep_Object_menu_ul {overflow: auto; margin-top: 7px; position: relative; top: 1px;}
+.ep_Object_menu_ul li {float: left; display: block;}
+.ep_Object_menu_ul li a {display: block; padding: 7px 15px; border-top-right-radius: 7px; -webkit-border-top-right-radius: 7px; -moz-border-radius-topright: 7px; -o-border-top-right-radius: 7px; border-top-left-radius: 7px; -webkit-border-top-left-radius: 7px; -moz-border-radius-topleft: 7px; -o-border-top-left-radius: 7px; font-size: 11px; letter-spacing: 0.06em; font-weight: bold; text-transform: uppercase; background-color: #EEE; border: 1px solid #CCC; border-bottom: 1px solid #CCC; margin-left: -1px;}
+.ep_Object_menu_ul li a:hover {color: #0083B8;}
+.ep_Object_menu_ul li:first-child a {border-top-left-radius: 0; -webkit-border-top-left-radius: 0; -moz-border-radius-topleft: 0; -o-border-top-left-radius: 0;}
+.ep_Object_menu_ul li.hidden {display: none;}
+.ep_Object_menu_ul li.s.hidden {display: block;}
+
+.ep_Object_menu_ul li.s a {background-color: #FFF; color: #444; border-bottom: 1px solid #FFF;}
+
+
+.ep_Object_side_div .gradient {display: block; height: 30px; width: 1px;}
+.ep_Object_side_div .gradient.top {background-image: linear-gradient(bottom, rgb(204,204,204) 0%, rgb(255,255,255) 100%);
+background-image: -o-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(255,255,255) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(255,255,255) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(255,255,255) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(204,204,204) 0%, rgb(255,255,255) 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(204,204,204)),
+	color-stop(1, rgb(255,255,255))
+);}
+.ep_Object_side_div .gradient.bottom {
+
+background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(204,204,204) 100%);
+background-image: -o-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(204,204,204) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(204,204,204) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(204,204,204) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(204,204,204) 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(255,255,255)),
+	color-stop(1, rgb(204,204,204))
+);
+
+}
+
+
+
+.page_ep_Object .ep_Object_inner_cont_div {overflow: auto;}
+.page_ep_Object .ep_Object_inner_main_div {float: left; width: 410px;}
+.page_ep_Object .ep_Object_inner_side_div {margin-left: 410px; padding-left: 20px;}
+
+
+.page_ep_Object._tabs .ep_Object_inner_main_div {float: left; width: 340px;}
+.page_ep_Object._tabs .ep_Object_inner_side_div {margin-left: 340px; padding-left: 20px;}
+.page_ep_Object._tabs .s_info_ul li .v {width: 120px;}
+.page_ep_Object._tabs .s_info_ul li .l {margin-left: 130px;}
+
+
+.s_object_meta_div {background-color: #FAFAFA; border-bottom: 1px solid #CCC; background-color: #FAFAFA; padding: 10px 0;}
+
+._obj_links_ul {margin: 0 0 20px;}
+._obj_links_ul li {padding: 5px 10px;}
+._obj_links_ul li a {}
+
+
+
+.download_btn_cont {text-align: center; background-color: #DDD; padding: 10px;}
+.download_btn {font-size: 12px; box-shadow: 0 0 10px #EEE; -webkit-box-shadow: 0 0 10px #EEE; font-weight: bold;}
+
+
+
+
+._obj_cont_div ._obj_main_div_a {width: 730px; border-right: 1px solid #DDD;;}
+._obj_cont_div ._obj_side_div_a {margin-left: 730px;}
+
+
+._obj_cont_div {background-color: #FFF;}
+._obj_cont_div .padd {padding: 20px;}
+._obj_cont_div .opis {font-size: 14px; line-height: 22px;}
+._obj_cont_div .status {font-size: 13px; line-height: 20px;}
+._obj_cont_div .opis {padding: 10px;}
+
+
+._obj_cont_div .s_blok.first {margin-top: 0;}
+._obj_cont_div .s_blok {margin: 30px 0;}
+._obj_cont_div .s_blok .s_blok_i {padding: 0;}
+._obj_cont_div .s_blok h2 {padding: 0; }
+
+._obj_cont_div h2 {padding: 0; font-size: 15px; color: #765;}
+.ep_Object_cont_div {border-top: 1px solid #CCC; box-shadow: 0 0 3px #AAA;
+  -webkit-box-shadow: 0 0 3px #AAA;
+  -moz-box-shadow: 0 0 3px #AAA;
+  -o-box-shadow: 0 0 3px #AAA;}
+._obj_cont_div ._obj_side_div_a {background-color: #F6F6F6;}
+
+
+
+
+.page_ep_Object .header {margin: 5px 0;}
+.object_title_div {overflow: auto; padding: 5px 20px;}
+.object_title_div .avatar_div {float: left;}
+.object_title_div .content_div {}
+.object_title_div .content_div .inner {margin-left: 10px;}
+.object_title_div .content_div h1 {padding: 0; margin: 0 0 10px;}
+
+.object_title_div .content_div .subtitle {padding: 3px 10px; font-size: 12px;}
+._obj_side_div ._opis {padding: 0 15px; line-height: 22px;}
+
+
+.s_main_content_container .s_column_main_right.single {background-color: #F3F3F3;}

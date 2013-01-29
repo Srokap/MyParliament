@@ -1,0 +1,54 @@
+._search_browser {}
+._search_browser .s_browser_filters_cont {background-color: #FFF;}
+
+._search_browser .facelet_cont {}
+._search_browser .s_browser_cont {float: none; width: inherit; padding: 0 50px;}
+
+._search_browser .facet_ul {}
+._search_browser .facet_ul li {}
+._search_browser .facet_ul li.selected {background: url("/g/green_dot.png") no-repeat scroll 0 10px transparent;}
+._search_browser .facet_ul li a {display: block; outline: none; padding: 5px 10px 5px 15px;}
+._search_browser .facet_ul li a span {color: #555;}
+._search_browser .facet_ul li a span b {font-weight: normal;}
+
+._search_browser .s_browser_results_ul .ep_Object {box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;}
+._search_browser .s_browser_results_ul li.ep_Object:first-child {border-top: none;}
+._search_browser .s_browser_results_ul li.ep_Object:last-child {border-bottom: none;}
+._search_browser .s_browser_side_div {padding: 10px !important;}
+
+
+._search_browser .s_browser_bar {padding: 0;}
+
+
+._search_browser .s_browser_pagination.upper {float: left; text-align: left;}
+._search_browser .alerts_btns_cont {float: right; text-align: right; padding: 11px;}
+._search_browser .alerts_btns_cont .mBtn {font-size: 14px; padding: 3px 10px;}
+
+._search_browser .s_browser_order_div {}
+._search_browser .s_browser_order_div p {padding: 0 20px; position: relative; top: -5px;}
+._search_browser .s_browser_order_div p a {padding: 0 2px; margin: 0 2px;}
+._search_browser .s_browser_order_div p a.s {color: #FFF; background-color: #3D81EE;
+background-image: linear-gradient(top, #3D81EE 0%, #3777DD 100%);
+background-image: -o-linear-gradient(top, #3D81EE 0%, #3777DD 100%);
+background-image: -moz-linear-gradient(top, #3D81EE 0%, #3777DD 100%);
+background-image: -webkit-linear-gradient(top, #3D81EE 0%, #3777DD 100%);
+background-image: -ms-linear-gradient(top, #3D81EE 0%, #3777DD 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #3D81EE),
+	color-stop(1, #3777DD)
+);
+border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;}
+
+
+.ep_Object .li_hls {}
+.ep_Object .li_hls ul {background: none repeat scroll 0 0 #F3F3F3;
+    font-size: 12px;
+    font-style: italic;
+    margin: 20px 10px 0;}
+.ep_Object .li_hls ul li {
+    padding: 5px;}
+.ep_Object .li_hls ul li em {font-weight: bold; font-style: italic;}

@@ -1,0 +1,13 @@
+<div id="main_div">
+  <div id="content">
+	  <h2 class="first">Blog</h2>
+	  <div class="p">
+		  <p><a href="http://blog.sejmometr.pl">Oficjalny blog portalu Sejmometr (PL) &raquo;</a></p>
+	    <p><a href="http://blog.sejmometr.pl/en">Sejmometr official blog (EN) &raquo;</a></p>
+	  </div>
+	</div>
+</div>
+
+<div id="side_div">
+  <fb:like-box href="http://www.facebook.com/sejmometr" width="292" show_faces="true" stream="false" header="false"></fb:like-box>
+</div>

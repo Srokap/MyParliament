@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^(.+)/$ $1 [R]
+
+RewriteRule ^interpelacja/([a-zA-Z]{5})$ interpelacja.php?id=$1 [L]

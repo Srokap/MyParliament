@@ -1,0 +1,79 @@
+h1 {padding: 20px;}
+
+.tab_content {padding: 30px;
+    width: 800px;}
+
+.aktualnosci_container{
+	background-color: #FFF;
+	min-height: 530px;
+	border-top: 1px solid #CCC;
+}
+
+
+.aktualnosci_container .row {
+	padding: 5px;
+}
+
+.aktualnosci_container .row.desc {
+	font-size: 14px;
+    line-height: 22px;
+    padding: 20px;
+}
+
+.aktualnosci_container .row.buttons {
+	padding: 20px 5px 20px 155px;
+}
+
+.aktualnosci_container .row label{
+	display: block;
+	padding-left: 14px;
+	padding-top: 8px;
+}
+
+.aktualnosci_container .row label input{
+	margin-right: 10px;
+}
+
+
+.aktualnosci_container p label{
+	width: 140px;
+	float: left;
+	display: block;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.aktualnosci_container input[type="submit"]{
+	font-size: 14px;
+}
+
+.aktualnosci_container input[type="text"], .aktualnosci_container input[type="password"]{
+	width: 200px;
+	color: #444444;
+  font-size: 18px;
+  padding: 5px 10px;
+  width: 300px;
+
+}
+
+
+.aktualnosci_container span{
+	display: none;
+}
+
+.aktualnosci_container span.active{
+	display: inline;
+}
+
+.konto_menu{
+	margin-left: 20px;
+	width: 180px;
+	padding: 20px 0px;
+	float:left;
+}
+
+.konto_menu .active a{
+	color: #000000;
+}
+
+a.anchor {display: none;}

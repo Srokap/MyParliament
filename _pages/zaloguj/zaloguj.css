@@ -1,0 +1,70 @@
+h1 {padding: 20px;}
+
+#main_div {overflow: auto; padding: 30px 80px; min-height: 400px;}
+
+
+
+.login_container{
+	width: 610px;
+	float: left;
+}
+
+.fb_containter {
+
+  margin-left: 610px;
+}
+
+.fb_containter_inner {
+  overflow: hidden;
+  min-height: 100px;
+  padding: 30px 10px;
+}
+
+
+
+.login_container .row {
+	padding: 5px;
+}
+
+.login_container .row.links {
+	padding: 10px 10px 10px 130px;
+	margin-top: 10px;
+}
+.login_container .row.links p {
+	padding: 3px;
+}
+
+.login_container .row label{
+	width: 120px;
+	float: left;
+	display: block;
+	text-align: right;
+	padding-right: 10px;
+	padding-top: 9px;
+}
+
+.login_container input[type="submit"]{
+	margin-left: 130px;
+	font-size: 16px;
+}
+
+.login_container input[type="text"], .login_container input[type="password"]{
+	width: 200px;
+	color: #444444;
+    font-size: 18px;
+    padding: 5px 10px;
+    width: 300px;
+}
+
+.login_container form{
+	margin: 25px auto;
+}
+.login_container span{
+	display: none;
+}
+
+.login_container span.active{
+	display: inline;
+}
+
+.remember_input {margin: 11px 0;}

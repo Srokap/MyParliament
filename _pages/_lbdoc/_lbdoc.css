@@ -1,0 +1,6 @@
+html {background: transparent;}
+body {background: transparent;}
+
+#doc {width: 100%;}
+#doc .page {margin: 20px auto;}
+#doc .anchor {display: none;}

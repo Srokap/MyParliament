@@ -1,0 +1,42 @@
+RewriteEngine On
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} (.*)$
+RewriteRule ^(.+)/$ http://ochparlament.localhost/$1 [R=301,L]
+
+
+
+RewriteRule ^(.*)/$ http://%{HTTP_HOST}/$1 
+
+
+RewriteRule ^feed\/(.*?)$ servers/feed_redirection.php?_TARGET=$1&%{QUERY_STRING} [L]
+RewriteRule ^parser/([a-zA-Z0-9\_\%\/\-]+)$ SejmParser/index.php?_ACTION=$1&%{QUERY_STRING} [L]
+
+
+RewriteRule ^logout$ servers/request.php?_SERVICE=logout&%{QUERY_STRING} [L]
+RewriteRule ^login$ servers/request.php?_SERVICE=login&%{QUERY_STRING} [L]
+
+RewriteRule ^$ servers/page.php?_PAGE=&%{QUERY_STRING} [L]
+RewriteRule ^service/([a-zA-Z0-9\_\%\/\-]+)$ servers/service.php?_SERVICE=$1&%{QUERY_STRING} [L]
+RewriteRule ^service/([a-zA-Z0-9\_\%\/\-]+)$ servers/service.php?_SERVICE=$1&%{QUERY_STRING} [L]
+RewriteRule ^epapi/([a-zA-Z0-9\_\%\/\-]+)$ servers/epapi.php?_SERVICE=$1&%{QUERY_STRING} [L]
+RewriteRule ^requests/([a-zA-Z0-9\_\%\/\-]+)$ servers/request.php?_SERVICE=$1&%{QUERY_STRING} [L]
+RewriteRule ^sitemap$ servers/request.php?_SERVICE=sitemap&%{QUERY_STRING} [L]
+RewriteRule ^sitemap\/([a-zA-Z0-9\_\%ęóąśłżźćńĘÓĄŚŁŻŹŃ]+)$ servers/sitemap.php?_SITEMAP_ID=$1&%{QUERY_STRING} [L]
+RewriteRule ^sitemap\/([a-zA-Z0-9\_\%ęóąśłżźćńĘÓĄŚŁŻŹŃ]+)\-([0-9]+)$ servers/sitemap.php?_SITEMAP_ID=$1&_OFFSET=$2&%{QUERY_STRING} [L]
+RewriteRule ^lbdoc/([0-9]+)$ servers/page.php?_PAGE=_lbdoc&_ID=$1&%{QUERY_STRING} [L]
+RewriteRule ^doc/([0-9]+)\.html$ servers/request.php?_SERVICE=doc&_ID=$1&_MODE=html&%{QUERY_STRING} [L]
+RewriteRule ^doc/([0-9]+)$ servers/request.php?_SERVICE=doc&_ID=$1&_MODE=redirect&%{QUERY_STRING} [L]
+RewriteRule ^pobierz/([0-9]+)$ servers/request.php?_SERVICE=pobierz&_ID=$1&%{QUERY_STRING} [L]
+RewriteRule ^pattern/([a-zA-Z0-9\_\%\/\-]+)$ servers/pattern.php?_SERVICE=$1&%{QUERY_STRING} [L]
+RewriteRule ^rss\/([a-zA-Z0-9\_\%\-ęóąśłżźćńĘÓĄŚŁŻŹŃ]+)$ servers/page.php?_PAGE=$1&_MODE=rss&%{QUERY_STRING} [L]
+RewriteRule ^api\/docs\/([a-zA-Z0-9\_\%\-ęóąśłżźćńĘÓĄŚŁŻŹŃ]+)$ servers/page.php?_PAGE=api/object&_OBJECT=$1&%{QUERY_STRING} [L]
+
+
+RewriteRule ^([a-zA-Z0-9\_\%\-ęóąśłżźćńĘÓĄŚŁŻŹŃ]+)$ servers/page.php?_PAGE=$1&_MODE=browse&%{QUERY_STRING} [L]
+RewriteRule ^([a-zA-Z0-9\_\%\-ęóąśłżźćńĘÓĄŚŁŻŹŃ]+)\/([0-9]+)$ servers/page.php?_PAGE=$1&_ID=$2&%{QUERY_STRING} [L]
+RewriteRule ^([a-zA-Z0-9\_\%\-ęóąśłżźćńĘÓĄŚŁŻŹŃ]+)\/([0-9]+)\,([a-zA-Z0-9\_\%\-ęóąśłżźćńĘÓĄŚŁŻŹŃ]+)$ servers/page.php?_PAGE=$1&_ID=$2&%{QUERY_STRING} [L]
+RewriteRule ^([a-zA-Z0-9\_\%\-ęóąśłżźćńĘÓĄŚŁŻŹŃ]+)\/([0-9]+)\/([a-zA-Z0-9\_\%\-ęóąśłżźćńĘÓĄŚŁŻŹŃ]+)$ servers/page.php?_PAGE=$1&_ID=$2&_TAB_ID=$3&%{QUERY_STRING} [L]
+RewriteRule ^([a-zA-Z0-9\_\%\-ęóąśłżźćńĘÓĄŚŁŻŹŃ]+)\/([0-9]+)\/([a-zA-Z0-9\_\%\-ęóąśłżźćńĘÓĄŚŁŻŹŃ]+)\/([0-9]+)$ servers/page.php?_PAGE=$1&_ID=$2&_TAB_ID=$3&_ID2=$4&%{QUERY_STRING} [L]
+RewriteRule ^([a-zA-Z0-9\_\%\/\-]+)$ servers/page.php?_PAGE=$1&%{QUERY_STRING} [L]

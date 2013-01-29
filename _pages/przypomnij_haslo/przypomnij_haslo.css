@@ -1,0 +1,24 @@
+.s_login_title_container {
+    border-bottom: 1px solid #F3F3F3;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    overflow: auto;
+}
+
+.s_login_cont_div p{
+	padding-bottom: 10px;
+}
+
+.s_login_cont_div p label{
+	width: 80px;
+	float: left;
+	display: block;
+}
+
+.s_login_cont_div p input[type="submit"]{
+	margin-left: 80px;
+}
+.s_login_cont_div{
+	overflow: auto;
+	padding-left: 15px;
+}
