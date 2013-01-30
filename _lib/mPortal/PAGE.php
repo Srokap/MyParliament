@@ -85,38 +85,17 @@ class PAGE extends PATTERN {
 				$this->DATASET_BASE_ALIAS = $dataset_base_alias;
 
 
-
-
 				// OBIEKT
-
-				if( $_GET['_ID'] ) {
+				if(isset( $_GET['_ID'] ) && $_GET['_ID'] ) {
 					if( class_exists($results_class) ) {
 						$this->OBJECT = new $results_class( $_GET['_ID'] );
-
-
-
-						/*
-						 if( $this->isAdmin() ) {
-						 
-						var_export( $this->OBJECT );
-						die();
-	      
-						}
-						*/
-
-
-
 
 						if( $this->OBJECT ) {
 							$this->ID = isset($_REQUEST['__VERSION']) ? '_objects_'. $_REQUEST['__VERSION'] .'/'.$results_class : '_objects/'.$results_class;
 							$page = $this->ID;
 								
-							 
 							$this->TITLE = $this->OBJECT->getTitle();
 							$desc = $this->OBJECT->getDescription();
-								
-								
-								
 								
 							if( $desc )
 								$this->set_meta('description', $desc);
@@ -826,10 +805,10 @@ class PAGE extends PATTERN {
 		 
 
 	  
-		 
+		$page_html = '';
 		if( file_exists($template_file) ) {
 			$page_html = $this->SMARTY->fetch($template_file);
-		}
+		} 
 		 
 		/*
 	  $template_file = ROOT.'/_pages/'.$this->ID.'/'.$this->NAME.'-header.tpl';

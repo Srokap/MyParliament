@@ -19,7 +19,6 @@ if( $parts[0]=='feed' ) {
 	include( $_SERVER['DOCUMENT_ROOT'].'/servers/sitemap.php' );
 
 } else {
- 
 	require_once( '../_lib/mPortal/PAGE.php' );
 	$M = new Page($_REQUEST['_PAGE']);
 	 

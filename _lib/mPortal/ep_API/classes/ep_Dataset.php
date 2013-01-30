@@ -105,7 +105,7 @@
 			
 			
 		  $this->performance = $data['performance'];
-		  $this->q = $data['query'];
+		  $this->q = isset( $data['query'] ) ? $data['query'] : '';
 			$this->items_class = $data['items_class'];
 			$this->items = $data['items'];
 			$this->items_found_rows = $data['items_found_rows'];

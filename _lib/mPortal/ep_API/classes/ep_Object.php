@@ -166,7 +166,7 @@
 		public function getTitle(){
 			
 			foreach( array('tytul', 'nazwa', 'label', 'sygnatura', 'kod') as $key )
-			  if( $this->data[ $key ] )
+			  if( isset( $this->data[ $key ] ) && $this->data[ $key ] )
 			    return $this->data[ $key ];
 			    
 			return '';

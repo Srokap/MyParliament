@@ -274,8 +274,25 @@ CREATE TABLE IF NOT EXISTS `m_components` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
--- Dumping data for table ochparliament_local.m_components: 0 rows
+-- Dumping data for table ochparliament_local.m_components: 16 rows
 /*!40000 ALTER TABLE `m_components` DISABLE KEYS */;
+INSERT INTO `m_components` (`id`, `js`, `css`, `smarty`) VALUES
+	('addthis', '1', '1', '1'),
+	('czas_hm', '0', '0', '1'),
+	('dataset_browser', '1', '1', '1'),
+	('data_slowna', '0', '0', '1'),
+	('dopelniacz', '0', '0', '1'),
+	('dopelniaczb', '0', '0', '1'),
+	('dstats_chart', '1', '1', '1'),
+	('epdoc', '1', '1', '1'),
+	('epdoc_img', '1', '1', '1'),
+	('ep_doc', '1', '1', '0'),
+	('getlink', '0', '0', '1'),
+	('fblike', '0', '1', '1'),
+	('object', '1', '1', '0'),
+	('wiek', '0', '0', '1'),
+	('plec', '0', '0', '1'),
+	('kalendarzyk', '0', '1', '1');
 /*!40000 ALTER TABLE `m_components` ENABLE KEYS */;
 
 
@@ -285,8 +302,26 @@ CREATE TABLE IF NOT EXISTS `m_components_defaults` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
--- Dumping data for table ochparliament_local.m_components_defaults: 0 rows
+-- Dumping data for table ochparliament_local.m_components_defaults: 17 rows
 /*!40000 ALTER TABLE `m_components_defaults` DISABLE KEYS */;
+INSERT INTO `m_components_defaults` (`id`) VALUES
+	('addthis'),
+	('czas_hm'),
+	('data_slowna'),
+	('dataset_browser'),
+	('dopelniacz'),
+	('dopelniaczb'),
+	('dstats_chart'),
+	('ep_doc'),
+	('epdoc'),
+	('epdoc_img'),
+	('fblike'),
+	('getlink'),
+	('kalendarzyk'),
+	('object'),
+	('plec'),
+	('s_glosowanie'),
+	('wiek');
 /*!40000 ALTER TABLE `m_components_defaults` ENABLE KEYS */;
 
 
@@ -314,8 +349,8 @@ CREATE TABLE IF NOT EXISTS `m_files_stamps` (
 -- Dumping data for table ochparliament_local.m_files_stamps: 4 rows
 /*!40000 ALTER TABLE `m_files_stamps` DISABLE KEYS */;
 INSERT INTO `m_files_stamps` (`file`, `ext`, `stamp`) VALUES
-	('engine', 'css', '5107b39c2bbf0'),
-	('engine', 'js', '5107b39c32bbf'),
+	('engine', 'css', '5108f61c765eb'),
+	('engine', 'js', '5108f61c86e81'),
 	('engine_admin', 'css', '50fe959e5b3ab'),
 	('engine_admin', 'js', '50fe959e657d5');
 /*!40000 ALTER TABLE `m_files_stamps` ENABLE KEYS */;
@@ -394,7 +429,7 @@ CREATE TABLE IF NOT EXISTS `m_pages` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
--- Dumping data for table ochparliament_local.m_pages: 8 rows
+-- Dumping data for table ochparliament_local.m_pages: 14 rows
 /*!40000 ALTER TABLE `m_pages` DISABLE KEYS */;
 INSERT INTO `m_pages` (`id`, `title`, `layout`, `fullscreen`, `js_stamp`, `css_stamp`, `front_menu`) VALUES
 	('404', 'Strona nie istnieje', 'front', '0', '', '', ''),
@@ -404,7 +439,11 @@ INSERT INTO `m_pages` (`id`, `title`, `layout`, `fullscreen`, `js_stamp`, `css_s
 	('konto', 'Moje konto', 'user', '0', '50fe9f7622845', '50fe9f7622ac6', ''),
 	('rejestracja', 'Rejestracja', 'front', '0', '50feaa7bde8d2', '50feaa7bdead7', ''),
 	('odzyskanie_hasla', '', '', '0', '', '50feab62e665f', ''),
-	('admin', '', 'admin', '0', '', '', '');
+	('admin', '', 'admin', '0', '', '', ''),
+	('', '', '', '0', '', '', ''),
+	('admin/wizard', '', 'admin', '0', '510927108a048', '510927108a8b8', ''),
+	('_dataset', '', 'data', '0', '', '5108f3538d3b9', ''),
+	('_objects/ep__Dataset', '', '', '0', '', '', '');
 /*!40000 ALTER TABLE `m_pages` ENABLE KEYS */;
 
 
@@ -488,14 +527,17 @@ CREATE TABLE IF NOT EXISTS `m_services` (
   KEY `page` (`page`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
--- Dumping data for table ochparliament_local.m_services: 5 rows
+-- Dumping data for table ochparliament_local.m_services: 12 rows
 /*!40000 ALTER TABLE `m_services` DISABLE KEYS */;
 INSERT INTO `m_services` (`id`, `page`, `lastRun`, `counter`, `file_exists`, `filesize`, `md5`, `_id`) VALUES
 	('mPortal/pages/build', '', '0000-00-00 00:00:00', 0, '1', 0, '', ''),
 	('mPortal/pages/build_engines', '', '0000-00-00 00:00:00', 0, '1', 0, '', ''),
 	('mPortal/pages/create_build', '', '0000-00-00 00:00:00', 0, '1', 0, '', ''),
 	('mPortal/components/build_pages', '', '0000-00-00 00:00:00', 0, '1', 0, '', ''),
-	('mPortal/pages/build_all', '', '0000-00-00 00:00:00', 0, '1', 0, '', '');
+	('mPortal/pages/build_all', '', '0000-00-00 00:00:00', 0, '1', 0, '', ''),
+	('mPortal/pages/create', '', '0000-00-00 00:00:00', 0, '1', 0, '', ''),
+	('mPortal/services/new', '', '0000-00-00 00:00:00', 0, '1', 0, '', ''),
+	('admin/wizard/step_1', '', '0000-00-00 00:00:00', 0, '0', 0, '', '');
 /*!40000 ALTER TABLE `m_services` ENABLE KEYS */;
 
 
@@ -508,8 +550,12 @@ CREATE TABLE IF NOT EXISTS `m_services_access` (
   KEY `page` (`page`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
--- Dumping data for table ochparliament_local.m_services_access: 0 rows
+-- Dumping data for table ochparliament_local.m_services_access: 3 rows
 /*!40000 ALTER TABLE `m_services_access` DISABLE KEYS */;
+INSERT INTO `m_services_access` (`service`, `page`, `group`) VALUES
+	('admin/wizard/step_1', '', 2),
+	('admin/wizard/step_2', '', 2),
+	('admin/wizard/step_3', '', 2);
 /*!40000 ALTER TABLE `m_services_access` ENABLE KEYS */;
 
 
@@ -544,31 +590,10 @@ CREATE TABLE IF NOT EXISTS `m_sql_errors` (
   `query` text COLLATE utf8_polish_ci NOT NULL,
   `error` text COLLATE utf8_polish_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1539 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=1546 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
--- Dumping data for table ochparliament_local.m_sql_errors: 20 rows
+-- Dumping data for table ochparliament_local.m_sql_errors: 27 rows
 /*!40000 ALTER TABLE `m_sql_errors` DISABLE KEYS */;
-INSERT INTO `m_sql_errors` (`id`, `date`, `user`, `HTTP_HOST`, `REQUEST_URI`, `HTTP_USER_AGENT`, `REMOTE_ADDR`, `query`, `error`) VALUES
-	(1519, '2013-01-27 21:44:29', '', 'localhost', '/ochparlament/zaloguj', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias=\'zaloguj\' AND base_alias!=\'pisma\'', 'Table \'epanstwo_local.api_datasets\' doesn\'t exist'),
-	(1520, '2013-01-27 21:44:42', '', 'localhost', '/ochparlament/zaloguj', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias=\'zaloguj\' AND base_alias!=\'pisma\'', 'Table \'epanstwo_local.api_datasets\' doesn\'t exist'),
-	(1521, '2013-01-27 21:44:45', '', 'localhost', '/ochparlament/rejestracja', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias=\'rejestracja\' AND base_alias!=\'pisma\'', 'Table \'epanstwo_local.api_datasets\' doesn\'t exist'),
-	(1522, '2013-01-27 21:44:50', '', 'localhost', '/ochparlament/zaloguj', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias=\'zaloguj\' AND base_alias!=\'pisma\'', 'Table \'epanstwo_local.api_datasets\' doesn\'t exist'),
-	(1523, '2013-01-27 21:45:00', '', 'localhost', '/ochparlament/zaloguj', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias=\'zaloguj\' AND base_alias!=\'pisma\'', 'Table \'epanstwo_local.api_datasets\' doesn\'t exist'),
-	(1524, '2013-01-27 21:46:08', '', 'localhost', '/ochparlament/zaloguj', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias=\'zaloguj\' AND base_alias!=\'pisma\'', 'Table \'epanstwo_local.api_datasets\' doesn\'t exist'),
-	(1525, '2013-01-27 21:46:10', '', 'localhost', '/ochparlament/zaloguj', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias=\'zaloguj\' AND base_alias!=\'pisma\'', 'Table \'epanstwo_local.api_datasets\' doesn\'t exist'),
-	(1526, '2013-01-27 21:46:33', '', 'localhost', '/ochparlament/zaloguj', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias=\'zaloguj\' AND base_alias!=\'pisma\'', 'Table \'epanstwo_local.api_datasets\' doesn\'t exist'),
-	(1527, '2013-01-27 21:46:49', '', 'localhost', '/ochparlament/zaloguj', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias=\'zaloguj\' AND base_alias!=\'pisma\'', 'Table \'epanstwo_local.api_datasets\' doesn\'t exist'),
-	(1528, '2013-01-27 21:47:03', '', 'localhost', '/ochparlament/dane', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias=\'dane\' AND base_alias!=\'pisma\'', 'Table \'epanstwo_local.api_datasets\' doesn\'t exist'),
-	(1529, '2013-01-27 21:47:07', '', 'localhost', '/ochparlament/powiadomienia', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias=\'powiadomienia\' AND base_alias!=\'pisma\'', 'Table \'epanstwo_local.api_datasets\' doesn\'t exist'),
-	(1530, '2013-01-27 21:47:10', '', 'localhost', '/ochparlament/api', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias=\'api\' AND base_alias!=\'pisma\'', 'Table \'epanstwo_local.api_datasets\' doesn\'t exist'),
-	(1531, '2013-01-27 21:47:14', '', 'localhost', '/ochparlament/zaloguj', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias=\'zaloguj\' AND base_alias!=\'pisma\'', 'Table \'epanstwo_local.api_datasets\' doesn\'t exist'),
-	(1532, '2013-01-28 11:48:42', '', 'localhost', '/ochparlament/dane', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT id FROM s_poslowie_kadencje WHERE slug=\'dane\'', 'Table \'epanstwo_local.s_poslowie_kadencje\' doesn\'t exist'),
-	(1533, '2013-01-28 11:48:48', '', 'localhost', '/ochparlament/api', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT id FROM s_poslowie_kadencje WHERE slug=\'api\'', 'Table \'epanstwo_local.s_poslowie_kadencje\' doesn\'t exist'),
-	(1534, '2013-01-28 13:23:07', '', 'localhost', '/OchParlament/admin', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT id FROM s_poslowie_kadencje WHERE slug=\'admin\'', 'Table \'epanstwo_local.s_poslowie_kadencje\' doesn\'t exist'),
-	(1535, '2013-01-28 13:23:51', '', 'localhost', '/OchParlament/admin', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT id FROM s_poslowie_kadencje WHERE slug=\'admin\'', 'Table \'epanstwo_local.s_poslowie_kadencje\' doesn\'t exist'),
-	(1536, '2013-01-28 13:26:26', '', 'localhost', '/OchParlament/ad', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT id FROM s_poslowie_kadencje WHERE slug=\'ad\'', 'Table \'epanstwo_local.s_poslowie_kadencje\' doesn\'t exist'),
-	(1537, '2013-01-28 13:26:34', '', 'localhost', '/OchParlament/admin', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT id FROM s_poslowie_kadencje WHERE slug=\'admin\'', 'Table \'epanstwo_local.s_poslowie_kadencje\' doesn\'t exist'),
-	(1538, '2013-01-28 13:26:37', '', 'localhost', '/OchParlament/a', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0', '127.0.0.1', 'SELECT id FROM s_poslowie_kadencje WHERE slug=\'a\'', 'Table \'epanstwo_local.s_poslowie_kadencje\' doesn\'t exist');
 /*!40000 ALTER TABLE `m_sql_errors` ENABLE KEYS */;
 
 
@@ -666,7 +691,7 @@ CREATE TABLE IF NOT EXISTS `m_users` (
 -- Dumping data for table ochparliament_local.m_users: ~1 rows (approximately)
 /*!40000 ALTER TABLE `m_users` DISABLE KEYS */;
 INSERT INTO `m_users` (`id`, `fb_id`, `name`, `first_name`, `last_name`, `link`, `username`, `gender`, `email`, `email_verified`, `group`, `registration_time`, `update_time`, `type`, `expires`, `token`, `login_hash`, `bd_date`, `postal_code`, `email_pass`, `remember_me`, `reg_ip`, `cookie_load_timestamp`, `fb_app_id`, `pass_recover`, `pass_recover_ts`, `is_active`, `is_deleted`, `deleted_ts`, `api_secret`, `api_key`, `api_count`, `api_total_count`, `news_email_freq`) VALUES
-	(1, 0, '', '', '', '', 'admin', '', 'admin@ochparliament.pl', '3', 2, '2013-01-22 00:00:00', '2013-01-22 00:00:00', 'sm', '0000-00-00 00:00:00', 'FMDOOK8TH7ZGQM<XH04KKCUN9WIO2MNT=L8JQ5F6IZL1GG3?RKPN5L58MA8A:9BB0ZQVM0NSE69U7PO5XL;6D9;21;', '0bacd04db92672e14d9924bed97e960f61924d0b', '0000-00-00', '', '', '0', '', '0000-00-00 00:00:00', 0, '', '0000-00-00 00:00:00', '1', '0', '0000-00-00 00:00:00', '', '', 0, 0, '2');
+	(1, 0, '', '', '', '', 'admin', '', 'admin@ochparliament.pl', '3', 2, '2013-01-22 00:00:00', '2013-01-22 00:00:00', 'sm', '0000-00-00 00:00:00', '2;Z8Z24R9BPHG?E7>>BUB<5?7OOTAIR3C?C:80:4YZ=TI<98B?3?=8C3J:DH5COF:><8QTP;3B:004=3V<4OIY6MBJ', '0bacd04db92672e14d9924bed97e960f61924d0b', '0000-00-00', '', '', '0', '', '0000-00-00 00:00:00', 0, '', '0000-00-00 00:00:00', '1', '0', '0000-00-00 00:00:00', '', '', 0, 0, '2');
 /*!40000 ALTER TABLE `m_users` ENABLE KEYS */;
 
 
