@@ -290,7 +290,7 @@ input.s_text_input {border: 1px solid #777777;
 
 
 
-.s_menu_div {overflow: auto; margin-left: 140px;}
+.s_menu_div {overflow: auto; padding: 0 5px;}
 .s_menu_div a:hover {text-decoration: none;}
 .s_menu_div ul.left {float: left; text-align: left;}
 .s_menu_div ul.right {float: right; text-align: right;}
@@ -327,7 +327,7 @@ body.api .s_main_content_container .s_column_main_right {background-color: #FFF;
 
 
 
-.s_menu_div ul li.s_user_li {}
+.s_menu_div ul li.s_user_li {min-width: 110px;}
 .s_menu_div ul li.s_user_li a {padding-right: 10px;}
 .s_menu_div ul li.s_user_li a span {}
 .s_menu_div ul li.s_user_li a img {background: url("../g/sejmometr_main_sprite_01.png") repeat scroll 0 -12px transparent;
@@ -526,7 +526,6 @@ body._layout_new .s_header_cont.bc {height: 70px;}
 body._layout_new .s_preheader_div {display: none;}
 body._layout_new .s_content_cont {padding-top: 35px;}
 body._layout_new .s_content_cont.bc {padding-top: 70px;}
-body._layout_new .s_menu_div {margin-left: 170px; margin-right: 5px;}
 
 body._layout_new .s_main_menu_cont_div {
 background: #23508C;
@@ -554,7 +553,9 @@ background-color: #444;
 }
 body._layout_new a:hover {text-decoration: none;}
 body._layout_new .s_main_left_menu p.label {color: #333333;}
-body._layout_new .s_footer_div {border-top: 2px solid #777; width: 1240px; font-size: 11px;}
+body._layout_new .s_footer_div {border-top: 2px solid #777; font-size: 11px;}
+body._layout_new .s_footer_div.s_wrap {width: 1082px;}
+
 body._layout_new .kalendarzyk .rok {background-color: #D44;}
 
 #more_data_a {

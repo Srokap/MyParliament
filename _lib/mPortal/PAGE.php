@@ -42,38 +42,28 @@ class PAGE extends PATTERN {
 
 	var $TEMPMENU;
 
-	var $FB_APP_ID = '144885868891893';
+	var $FB_APP_ID = '';
 
 	function PAGE($page){
+	  
+	
 		$this->ID = $page;
 		parent::PATTERN();
-
-		 
+		
 		$this->BREAD_CRUMBS = array();
-
-
 		$this->isIpad = strstr($_SERVER['HTTP_USER_AGENT'], 'iPad');
+	
+		
+		if( $page=='' || $page=='homepage' ) {
 
-		if( $page=='' || $page=='start' ) {
 
-			$page = 'start';
-			$this->ID = 'start';
-			$_GET['_PAGE'] = 'start';
+			$page = 'homepage';
+			$this->ID = 'homepage';
+			$_GET['_PAGE'] = 'homepage';
 
-		} elseif( $page=='epfapi' ) {
-
-			$page = 'api';
-			$this->ID = 'api';
-			$_GET['_PAGE'] = 'api';
-
-		} elseif( $page=='epf_api' ) {
-
-			header("HTTP/1.1 301 Moved Permanently");
-			header("Location: ".SITE_ADDRESS."/api");
-			exit();
 
 		} else {
-			 
+			 			
 			list($dataset_base_alias, $results_class, $datasetname) = $this->DB->selectRow("SELECT base_alias, results_class, name FROM api_datasets WHERE base_alias='$page' AND base_alias!='pisma'");
 			if( $dataset_base_alias ) {
 
@@ -85,7 +75,7 @@ class PAGE extends PATTERN {
 				$this->DATASET_BASE_ALIAS = $dataset_base_alias;
 
 
-				// OBIEKT
+
 				if(isset( $_GET['_ID'] ) && $_GET['_ID'] ) {
 					if( class_exists($results_class) ) {
 						$this->OBJECT = new $results_class( $_GET['_ID'] );
@@ -145,46 +135,21 @@ class PAGE extends PATTERN {
 								}
 								 
 								$this->OBJECT_TABS = array_values( $this->OBJECT_TABS );
-								// var_export( $this->OBJECT_TABS );
 								 
 								 
 									
 							}
 								
 								
-							/*
-							 if( $_SERVER['REMOTE_ADDR']=='31.178.14.166' ) {
-							 
-							echo( "\n\n\ns0" );
-
-							}
-							*/
-								
 							$logic_file = ROOT.'/_pages/_objects/'.$results_class.'/tabs/'.$this->OBJECT_TAB['id'].'.php';
 							if( file_exists($logic_file) )
 								include( $logic_file );
-								
-								
-							/*
-							 if( $_SERVER['REMOTE_ADDR']=='31.178.14.166' ) {
-							 
-							echo( "\n\n\ns1" );
-
-							}
-							*/
 								
 								
 							if( $this->OBJECT_TAB['dataset'] )
 								$this->OBJECT_TAB['dataset']->get_info();
 								
 								
-							/*
-							 if( $_SERVER['REMOTE_ADDR']=='31.178.14.166' ) {
-							 
-							echo( "\n\n\ns2" );
-
-							}
-							*/
 								
 						}
 						 
@@ -193,59 +158,6 @@ class PAGE extends PATTERN {
 						die();
 					}
 				}
-
-			} else {
-					
-				$map = $this->DB->selectPairs("SELECT old_alias, new_alias FROM api_redirections WHERE enabled='1'");
-				$map = array_merge($map, array(
-						'projekt' => 'projekty_ustaw',
-						'ustawy' => 'projekty_ustaw',
-						'uchwaly' => 'projekty_uchwal',
-						'umowy' => 'projekty_ustaw',
-						'sprawozdania' => 'projekty_ustaw',
-						'powolania' => 'projekty_ustaw',
-						'powolania_odwolania' => 'projekty_ustaw',
-						'referenda' => 'projekty_ustaw',
-						'rezolucje' => 'projekty_uchwal',
-						'zmiana_w_skladach_komisji' => 'projekty_uchwal',
-						'zmiany_regulaminu' => 'projekty_uchwal',
-						'inne' => 'projekty_ustaw',
-							
-						'projekty' => 'projekty_ustaw',
-						'druki' => 'druki_sejmowe',
-						'druk' => 'druki_sejmowe',
-						'inne' => 'projekty_ustaw',
-						 
-						'posiedzenie' => 'posiedzenia_sejmowe',
-						'posiedzenia' => 'posiedzenia_sejmowe',
-						'dni' => 'dni_sejmowe',
-						'dzien' => 'dni_sejmowe',
-						 
-						'punkt' => 'sejm_posiedzenia_punkty',
-						'punkty' => 'sejm_posiedzenia_punkty',
-						'rozpatrywanie' => 'sejm_debaty',
-						'rozpatrywania' => 'sejm_debaty',
-						'wystapienie' => 'wystapienia_sejmowe',
-						'wystapienia' => 'wystapienia_sejmowe',
-						'glosowanie' => 'glosowania_sejmowe',
-						'glosowania' => 'glosowania_sejmowe',
-						 
-				));
-					
-					
-				if( isset( $map[ $page ] ) ) {
-
-					$url = SITE_ADDRESS . $map[ $page ];
-					if( $_GET['_ID'] ){
-						$url .= '/'.$_GET['_ID'];
-					}
-
-					header("HTTP/1.1 301 Moved Permanently");
-					header("Location: $url");
-					exit();
-				}
-					
-				 
 
 			}
 
@@ -277,6 +189,8 @@ class PAGE extends PATTERN {
 		 
 
 
+
+
 		if( empty($pagedata) ) {
 			 
 			$this->ID = ERROR_PAGE;
@@ -294,44 +208,7 @@ class PAGE extends PATTERN {
 		$this->DICT = array_merge( $this->DICT, include( ROOT.'/_lang/local_engine.php' ) );
 		 
 		 
-		 
-		// START MENU
-		$_smenu = $this->DB->selectAssocs("SELECT m_start_menu_items.id as 'item_id', m_start_menu_groups.id as 'group_id', m_start_menu_items.nazwa as 'item_name', m_start_menu_groups.nazwa as 'group_name', m_start_menu_items.href
-				FROM m_start_menu_items
-				JOIN m_start_menu_groups ON m_start_menu_items.group_id = m_start_menu_groups.id
-				ORDER BY m_start_menu_groups.ord ASC , m_start_menu_items.ord ASC
-				LIMIT 0 , 30");
-		 
-		$smenu = array();
-		$last_group_id = false;
-		for( $i=0; $i<count($_smenu); $i++ ) {
 
-			if( !$last_group_id || $last_group_id!=$_smenu[$i]['group_id'] )
-				$smenu[] = array(
-						'id' => $_smenu[$i]['group_id'],
-						'name' => $_smenu[$i]['group_name'],
-						'items' => array(
-								array(
-										'id' => $_smenu[$i]['item_id'],
-										'name' => $_smenu[$i]['item_name'],
-										'href' => $_smenu[$i]['href'],
-										's' => $_smenu[$i]['href']==$this->DATASET_BASE_ALIAS,
-								)
-						),
-				);
-			else
-				$smenu[ count($smenu)-1 ]['items'][] = array(
-						'id' => $_smenu[$i]['item_id'],
-						'name' => $_smenu[$i]['item_name'],
-						'href' => $_smenu[$i]['href'],
-						's' => $_smenu[$i]['href']==$this->DATASET_BASE_ALIAS,
-				);
-
-			$last_group_id = $_smenu[$i]['group_id'];
-
-		}
-		 
-		$this->SIDE_MENUS['start'] = $smenu;
 		 
 
 		list($title, $fullscreen, $layout, $js_stamp, $css_stamp, $access, $front_menu) = $pagedata;
@@ -648,71 +525,35 @@ class PAGE extends PATTERN {
 
 		$image_src = $this->CUSTOM_FB_LOGO ? $this->CUSTOM_FB_LOGO : '/g/fblogo.png';
 		$this->LINKS[] = array('rel'=>'image_src', 'href'=>$image_src);
-		// $this->set_meta( 'og:url', $image_src );
 
 
 
+		$this->FRONT_MENU = array(
+		  array(
+		    'url' => 'homepage',
+		    'name' => 'Homepage',
+		  ),
+		  array(
+		    'url' => 'data',
+		    'name' => 'Data',
+		  ),
+		  
+		  /*
+		  array(
+		    'url' => 'alerts',
+		    'name' => 'Alerts',
+		  ),
+		  array(
+		    'url' => 'search',
+		    'name' => 'Search',
+		  ),
+		  array(
+		    'url' => 'api',
+		    'name' => 'API',
+		  ),
+		  */
+		);
 
-		if( isset($_REQUEST['__VERSION']) && $_REQUEST['__VERSION']=='dev' ) {
-				
-			$this->FRONT_MENU = array(
-			  array(
-			    'url' => 'start',
-			    'name' => 'Start',
-			  ),
-			  array(
-			    'url' => 'dane',
-			    'name' => 'Dane',
-			  ),
-			  array(
-			    'url' => 'powiadomienia',
-			    'name' => 'Powiadomienia',
-			  ),
-			  array(
-			    'url' => 'kolekcje',
-			    'name' => 'Kolekcje',
-			  ),
-			  array(
-			    'url' => 'raporty',
-			    'name' => 'Raporty',
-			  ),
-			  array(
-			    'url' => 'polska',
-			    'name' => 'Kto tu rządzi?',
-			  ),
-			  array(
-			    'url' => 'pisma',
-			    'name' => 'Pisma',
-			  ),
-			);
-				
-		} else {
-
-			$this->FRONT_MENU = array(
-			  array(
-			    'url' => 'start',
-			    'name' => 'Start',
-			  ),
-			  array(
-			    'url' => 'dane',
-			    'name' => 'Dane',
-			  ),
-			  array(
-			    'url' => 'powiadomienia',
-			    'name' => 'Powiadomienia',
-			  ),
-			  array(
-			    'url' => 'szukaj',
-			    'name' => 'Szukaj',
-			    'dom_id' => '_MAIN_MENU_SEARCH_BUTTON',
-			  ),
-			  array(
-			    'url' => 'api',
-			    'name' => 'API',
-			  ),
-			);
-
-		}
 
 			
 
@@ -768,9 +609,6 @@ class PAGE extends PATTERN {
 				'isLogged' => $this->isLogged(),
 				'_FB_COOKIE' => $this->_FB_COOKIE,
 				'isIpad' => $this->isIpad,
-				'promo_poslowie' => isset( $__poslowie ) ? $__poslowie : null,
-				'promo_poslowie_width' => isset( $data_count ) ? $data_count*52+1 : 0,
-				'promo_poslowie_margin_left' => isset( $data_count ) ? $data_count*26 : 0,
 				'goHomeOnLogin' => $this->goHomeOnLogin,
 				'WIDEHEADER' => $this->WIDEHEADER,
 				'REL' => $this->REL,
@@ -789,7 +627,9 @@ class PAGE extends PATTERN {
 				'NOHEADER' => $this->NOHEADER,
 				'SEARCH_DIV_STATUS' => $this->SEARCH_DIV_STATUS,
 		);
-		 
+		
+		
+		
 		 
 		 
 		 

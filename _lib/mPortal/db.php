@@ -202,6 +202,8 @@
     }
     
     function insert_ignore_assoc($table, $data){
+    
+    
       if( empty($table) || empty($data) ) return false;      
       
       $keys = array_keys($data);

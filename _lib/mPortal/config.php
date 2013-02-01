@@ -1,8 +1,23 @@
 <?php
 date_default_timezone_set( 'Europe/Warsaw' );
-define( 'ROOT', 'C:\work\www\OchParliament' );
-define( 'SITE_ADDRESS', 'http://localhost/OchParliament');
-define( 'SITE_ROOT', '/OchParliament/' );	
+define( 'ROOT', $_SERVER['DOCUMENT_ROOT'] );
+define( 'SITE_ADDRESS', 'http://localhost/');
+define( 'SITE_ROOT', '/' );	
+
+
+
+define('DB_HOST', 'localhost');
+define('DB_USER', 'hungarian');
+define('DB_PASS', 'TU9NPKQNqXcGF82T');
+define('DB_DATABASE', 'hungarian');
+
+
+
+
+
+
+
+
 
 
 define( 'MAILER_REG_SMTPAUTH', true );
@@ -23,10 +38,7 @@ define('REGULAR_SESSION_MAXLIFE', 86400); // 1 day
 define('REMEMBER_ME_SESSION_MAXLIFE', 2592000); // 30 days
 define('VERIFY_PASSWORD_FREQUENCY', 180); // 30 minutes
 
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_DATABASE', 'ochparliament_local');
+
 
 define('DB_TABLE_components', 'm_components');
 define('DB_TABLE_components_defaults', 'm_components_defaults');

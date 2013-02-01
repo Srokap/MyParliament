@@ -1,1 +1,1 @@
-<p class="msg">Nie ma takiej strony</p>
+<p id="msg">Page doesn't exist</p>

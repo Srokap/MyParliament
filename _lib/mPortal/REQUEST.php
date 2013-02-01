@@ -20,7 +20,8 @@ class REQUEST {
 
 	function REQUEST($params = null){
 		$_SERVER['M'] = &$this;
-
+  
+    
 		ini_set('session.gc_maxlifetime', REGULAR_SESSION_MAXLIFE);
 		add_include_path( ROOT."/_lib" );
 		add_include_path( ROOT."/_lib/Zend" );		
@@ -28,11 +29,14 @@ class REQUEST {
 		
 		Zend_Session::start();
 
+
+		
 		if( !empty($params['ACCESS']) ) {
 			$this->ACCESS = $params['ACCESS'];
 		}
 		$this->DB = new DB(DB_HOST, DB_USER, DB_PASS, DB_DATABASE);
 
+		
 		$versions_array = array( 'v1' );
 		$types_array = array( 'json', 'xml' );
 			
@@ -57,28 +61,16 @@ class REQUEST {
 			}
 		}
 
+    
+    
 
 			
 
 		$this->USER = &$_SESSION['mPortal']['USER'];
 		setcookie('sm_token', '', time()+REMEMBER_ME_SESSION_MAXLIFE, '/');
-			
-			
-			
-			
-			
-		if( $_SERVER['SERVER_NAME']=='mampytanie.net' ) {
+		$this->FB_APP_ID = FB_APP_ID;
+		$this->FB_APP_SECRET = FB_APP_SECRET;
 
-			$this->FB_APP_ID = 158881954243930;
-			$this->FB_APP_SECRET = '3c9f0afb84babf5e3a674f8f128c61c1';
-
-
-		} else {
-
-			$this->FB_APP_ID = FB_APP_ID;
-			$this->FB_APP_SECRET = FB_APP_SECRET;
-
-		}
 
 		$this->FB = new Facebook(array(
 		  'appId' => $this->FB_APP_ID,
@@ -93,31 +85,6 @@ class REQUEST {
 		$this->FB_TOKEN = $this->FB->getAccessToken();
 
 
-		// Trying to login
-			
-			
-			
-			
-			
-
-		if( $_SERVER['REMOTE_ADDR']=='80.72.34.251' ) {
-			// $this->FB_USER_TOKEN = $this->FB->getUserAccessToken();
-
-			// header( 'Location:'.$this->FB->getLogoutUrl() );
-			// die();
-
-			/*
-			 var_export( 'FB_USER_ID= '.$this->FB_USER_ID ); echo "\n\n";
-			var_export( 'FB_TOKEN= '.$this->FB_TOKEN ); echo "\n\n";
-			var_export( 'FB_USER_TOKEN= '.$this->FB_USER_TOKEN ); echo "\n\n";
-			echo '<hr/>';
-			var_export( $this->USER );
-			echo '<hr/>';
-			var_export( $_COOKIE );
-			echo '<hr/>';
-			*/
-
-		}
 
 
 
@@ -256,6 +223,8 @@ class REQUEST {
 		// require_once(ROOT.'/_lib/epapi/epapi-local.php');
 
 	}
+	
+	
 
 
 

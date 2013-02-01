@@ -22,7 +22,7 @@ function _FB_procces_auth_response(response) {
     //but not connected to the app
     
     if( _LOGGED && _LOGGED_TYPE=='fb' ) {
-      console.log('FB: not_authorized');
+      // console.log('FB: not_authorized');
       location.reload();
     }
     
@@ -31,7 +31,7 @@ function _FB_procces_auth_response(response) {
     // the user isn't even logged in to Facebook.
     
     if( _LOGGED && _LOGGED_TYPE=='fb' ){
-      console.log('FB: not logged');
+      // console.log('FB: not logged');
       location.reload();
     }
   
@@ -453,7 +453,7 @@ var $_MPAGE = Class.create({
       try {
 			  callback();
 		  } catch(err) {
-		    console.log('callback error: '+err);
+		    // console.log('callback error: '+err);
 		  }
     });
     

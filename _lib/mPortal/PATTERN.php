@@ -7,7 +7,9 @@ class PATTERN extends REQUEST {
 
 	
 	function PATTERN($params=null){
-	  if( $params['ID'] ) $this->ID = $params['ID'];
+	  
+	  if( $params['ID'] )
+	    $this->ID = $params['ID'];
 	  
 		parent::REQUEST();
 		$this->IE6 = (boolean) stripos($_SERVER['HTTP_USER_AGENT'], 'MSIE 6');
