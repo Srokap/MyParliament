@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2013-02-02 11:43:01
+<?php /* Smarty version 2.6.19, created on 2013-02-02 10:52:19
          compiled from /MAMP/GitHub/OchParliament/_lib/mPortal/resources/layout.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', '/MAMP/GitHub/OchParliament/_lib/mPortal/resources/layout.tpl', 9, false),array('modifier', 'strip_tags', '/MAMP/GitHub/OchParliament/_lib/mPortal/resources/layout.tpl', 12, false),array('modifier', 'cat', '/MAMP/GitHub/OchParliament/_lib/mPortal/resources/layout.tpl', 27, false),array('modifier', 'default', '/MAMP/GitHub/OchParliament/_lib/mPortal/resources/layout.tpl', 98, false),)), $this); ?>

@@ -18,17 +18,18 @@
   
 	<div class="all_datasets_div">
 	  <ul class="datasets_ul">
-	    <li>
-	      <div class="li_inner">
-		      <p class="tytul"><a href="/bank_danych_lokalnych">Bank Danych Lokalnych</a></p>
-		      <p class="opis">Największa w Polsce baza danych, opisująca sytuację ekonomiczno-społeczną kraju.</p>
-	      </div>
-	    </li>
 	  {section name="datasets" loop=$datasets}{assign var="d" value=$datasets[datasets]}
 	    <li>
 	      <div class="li_inner">
-		      <p class="tytul"><a href="/{$d->data.base_alias}">{$d->data.name}</a></p>
-		      <p class="opis">{if $M.isAdmin}<div class="_admin_editable" _admin_editable_id="dane/dataset/{$d->data.base_alias}">{/if}{if $M.isAdmin && !$d->data.opis}null{else}{$d->data.opis}{/if}{if $M.isAdmin}</div>{/if}</p>
+		      <p class="tytul"><a href="/{$d.base_alias}">{$d.name}</a></p>
+		      <p class="opis">{if $M.isAdmin}<div class="_admin_editable" _admin_editable_id="dane/dataset/{$d.base_alias}">{/if}{if $M.isAdmin && !$d.opis}null{else}{$d.opis}{/if}{if $M.isAdmin}</div>{/if}</p>
+		      
+		      {if $M.isAdmin}
+		        <div class="admin_div" name="{$d.name}" base_alias="{$d.base_alias}" api_class="{$d.results_class}">
+		          <input class="mBtn yellow info" type="button" value="Admin info" />
+		        </div>
+		      {/if}
+		      
 	      </div>
 	    </li>
 	  {/section}

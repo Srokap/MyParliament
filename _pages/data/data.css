@@ -169,3 +169,24 @@ background-image: -webkit-gradient(
 #dataset_search_input {}
 #msg {font-size: 30px; text-align: center; padding-top: 100px; color: #AAA;}
 #new_dataset_p {text-align: center; margin-top: 20px;}
+
+
+
+
+
+
+
+
+
+
+.admin_div {margin-top: 20px;}
+.admin_div .mBtn {font-size: 11px; font-weight: bold;}
+
+.admin_lb_div {padding: 10px;}
+.admin_lb_div .title {margin-top: 40px; font-size: 16px;}
+.admin_lb_div .title:first-child {margin-top: 0;}
+.admin_lb_div ul {padding: 5px;}
+.admin_lb_div ul li {padding: 10px;}
+.admin_lb_div ul li .file {font-weight: bold;}
+.admin_lb_div ul li .path {font-style: italic; margin: 5px 0;}
+.admin_lb_div ul li .desc {}

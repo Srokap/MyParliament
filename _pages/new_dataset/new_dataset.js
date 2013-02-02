@@ -17,17 +17,27 @@ var WIZARD = Class.create({
 			$('btn_step_3').observe('click', this.step_3.bind(this));
 		if ($('btn_add_step_3'))
 			$('btn_add_step_3').observe('click', this.add_step_3.bind(this));
-		if( $('step_0') ){
-			$('step_0').show();
+		if( $('step_1') ){
+			$('step_1').show();
 		}
 	},
 	step_0 : function( e ){
+		console.log( $( 'f_alias' ).value );
+		var alias = $( 'f_alias' ).value;
+		var c_fields = $$( '[name="fields[]"]' );
+		var target = $('f_sort_field');
+		for( i = 0; i < c_fields.length; i++ ){
+			var opt = new Element('Option',{ 'value' : alias + '.' + $F(c_fields[i]) }).update( alias + '.' + $F(c_fields[i]) );
+			target.insert( opt );
+		}
+
+		
 		$('step_0').hide();
-		$('step_1').show();		
+		$('step_4').show();		
 	},
 	add_step_0 : function( e ){
 		var new_tr = new Element('tr');
-		new_tr.update( '<td class="name_td"><input type="text" class="name" name="col_name[]"></td><td><select name="col_type[]"><option value="text">Text</option><option value="varchar">Varchar</option><option value="int">Int</option></select></td><td><input type="text" name="col_length[]"></td><td><input type="button" value="Usuń" class="mBtn red"></td>' );
+		new_tr.update( '<td class="name_td"><input type="text" class="name" name="col_name[]"></td><td class="name_td"><input type="text" class="alias" name="fields[]"></td><td><select name="col_type[]"><option value="text">Text</option><option value="varchar">Varchar</option><option value="int">Int</option><option value="date">Date</option></select></td><td><input type="text" name="col_length[]"></td><td><input type="button" value="Remove" class="mBtn red"></td>' );
 		var button = new_tr.down('input[type="button"]', 0);
 
 		button.observe('click', this.remove_row.bind(this));
@@ -53,15 +63,12 @@ var WIZARD = Class.create({
 			$('f_results_class').up().down('span', 1).addClassName( 'active' );
 			error = true;
 		}
-		if( $F('f_table') == '' ){
-			$('f_table').up().down('span', 0).addClassName( 'active' );
-			error = true;
-		}
 		
+		//console.log( 'a');		
 		if( error ){
 			return;
 		}
-		
+
 		//var params = {};
 		//params.alias = $F('f_alias');
 		//params.results_class = $F('f_results_class');
@@ -79,7 +86,7 @@ var WIZARD = Class.create({
 			$('f_results_class').up().down('span', 0).addClassName( 'active' );
 		}
 		*/
-		
+		/*
 		this.alias = $F('f_alias');
 		d_fields = $$('[name="col_name[]"]' );
 		var fields = '';
@@ -91,9 +98,9 @@ var WIZARD = Class.create({
 			fields += '</p>';
 		}
 		$('inputs_step_2').update( fields );
-		
+		*/
 		$('step_1').hide();
-		$('step_2').show();
+		$('step_0').show();
 	
 	},
 	step_2 : function( e ){
@@ -146,15 +153,16 @@ var WIZARD = Class.create({
 		select.up( 'div' ).remove();
 	},
 	step_3 : function( e ){
-		var c_aliases = $$( '[name="c_alias[]"]' );
-		var c_fields = $$( '[name="c_field[]"]' );
+
+		var alias = $( 'f_alias' ).value;
+		var c_fields = $$( '[name="fields[]"]' );
 		var target = $('f_sort_field');
 		for( i = 0; i < c_aliases.length; i++ ){
-			var opt = new Element('Option',{ 'value' : $F(c_aliases[i]) + '.' + $F(c_fields[i]) }).update( $F(c_aliases[i]) + '.' + $F(c_fields[i]) );
+			var opt = new Element('Option',{ 'value' : alias + '.' + $F(c_fields[i]) }).update( alias + '.' + $F(c_fields[i]) );
 			target.insert( opt );
 		}
 		
 		$('step_3').hide();
-		$('step_4').show();		
+		//$('step_4').show();		
 	}
 });

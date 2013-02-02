@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2013-02-01 22:38:39
+<?php /* Smarty version 2.6.19, created on 2013-02-02 10:41:51
          compiled from /MAMP/GitHub/OchParliament/_pages/data/data.tpl */ ?>
 <div class="img_baner">
   
@@ -20,12 +20,6 @@
   
 	<div class="all_datasets_div">
 	  <ul class="datasets_ul">
-	    <li>
-	      <div class="li_inner">
-		      <p class="tytul"><a href="/bank_danych_lokalnych">Bank Danych Lokalnych</a></p>
-		      <p class="opis">Największa w Polsce baza danych, opisująca sytuację ekonomiczno-społeczną kraju.</p>
-	      </div>
-	    </li>
 	  <?php unset($this->_sections['datasets']);
 $this->_sections['datasets']['name'] = 'datasets';
 $this->_sections['datasets']['loop'] = is_array($_loop=$this->_tpl_vars['datasets']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
@@ -52,12 +46,22 @@ $this->_sections['datasets']['last']       = ($this->_sections['datasets']['iter
 ?><?php $this->assign('d', $this->_tpl_vars['datasets'][$this->_sections['datasets']['index']]); ?>
 	    <li>
 	      <div class="li_inner">
-		      <p class="tytul"><a href="/<?php echo $this->_tpl_vars['d']->data['base_alias']; ?>
-"><?php echo $this->_tpl_vars['d']->data['name']; ?>
+		      <p class="tytul"><a href="/<?php echo $this->_tpl_vars['d']['base_alias']; ?>
+"><?php echo $this->_tpl_vars['d']['name']; ?>
 </a></p>
-		      <p class="opis"><?php if ($this->_tpl_vars['M']['isAdmin']): ?><div class="_admin_editable" _admin_editable_id="dane/dataset/<?php echo $this->_tpl_vars['d']->data['base_alias']; ?>
-"><?php endif; ?><?php if ($this->_tpl_vars['M']['isAdmin'] && ! $this->_tpl_vars['d']->data['opis']): ?>null<?php else: ?><?php echo $this->_tpl_vars['d']->data['opis']; ?>
+		      <p class="opis"><?php if ($this->_tpl_vars['M']['isAdmin']): ?><div class="_admin_editable" _admin_editable_id="dane/dataset/<?php echo $this->_tpl_vars['d']['base_alias']; ?>
+"><?php endif; ?><?php if ($this->_tpl_vars['M']['isAdmin'] && ! $this->_tpl_vars['d']['opis']): ?>null<?php else: ?><?php echo $this->_tpl_vars['d']['opis']; ?>
 <?php endif; ?><?php if ($this->_tpl_vars['M']['isAdmin']): ?></div><?php endif; ?></p>
+		      
+		      <?php if ($this->_tpl_vars['M']['isAdmin']): ?>
+		        <div class="admin_div" name="<?php echo $this->_tpl_vars['d']['name']; ?>
+" base_alias="<?php echo $this->_tpl_vars['d']['base_alias']; ?>
+" api_class="<?php echo $this->_tpl_vars['d']['results_class']; ?>
+">
+		          <input class="mBtn yellow info" type="button" value="Admin info" />
+		        </div>
+		      <?php endif; ?>
+		      
 	      </div>
 	    </li>
 	  <?php endfor; endif; ?>

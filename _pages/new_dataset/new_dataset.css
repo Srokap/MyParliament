@@ -22,10 +22,13 @@ h3 {padding: 20px 0;}
 .form_table {width: 100%;}
 .form_table td {padding: 5px;}
 .form_table td.name_td {width: 500px;}
-.form_table td input.name {width: 490px;}
+.form_table td input.name {width: 400px;}
+.form_table td input.alias {width: 200px;}
 .form_table td .mBtn {font-size: 11px; font-weight: bold;}
 .form_table th {padding: 5px; font-weight: bold;}
 
 .std_form p {padding: 10px;}
 .std_form input {width: 540px !important; margin-right: 10px;}
 .std_form p label {margin-top: 2px; text-align: right; padding-right: 10px;}
+
+.form_title {margin: 0 0 20px;}

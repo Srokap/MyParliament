@@ -110,23 +110,7 @@
     {if $M.jsFile}<script type="text/javascript" src="{$M.SITE_ROOT}js/{$M.ID}-{$M.STAMPS.js}.js"></script>{/if}
     
     <script type="text/javascript">
-			{if $M.jsInline}{include file=$M.NAME|cat:"-inline.js"}{/if}				
-			
-			{if $M.google_maps}
-			{literal}
-			var script = document.createElement("script");
-		  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyCWTe-IcZTMpn2HyG3OaTGKla7SY72ddx8&sensor=false&libraries=geometry&callback=_google_maps_initialize";
-		  script.type = "text/javascript";
-		  document.getElementsByTagName("head")[0].appendChild(script);
-			{/literal}
-			{/if}
-			
-			{literal}
-			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	  </script>
-		<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-3303173-6"); pageTracker._trackPageview(); } catch(err) {}
-		  {/literal}  
+			{if $M.jsInline}{include file=$M.NAME|cat:"-inline.js"}{/if}							
 		</script>
 		<div id="__LIGHTBOXES">
     </div>

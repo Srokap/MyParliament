@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.19, created on 2013-02-01 22:14:15
+<?php /* Smarty version 2.6.19, created on 2013-02-02 10:32:25
          compiled from /MAMP/GitHub/OchParliament/_lib/mPortal/resources/layout.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', '/MAMP/GitHub/OchParliament/_lib/mPortal/resources/layout.tpl', 9, false),array('modifier', 'strip_tags', '/MAMP/GitHub/OchParliament/_lib/mPortal/resources/layout.tpl', 12, false),array('modifier', 'cat', '/MAMP/GitHub/OchParliament/_lib/mPortal/resources/layout.tpl', 27, false),array('modifier', 'default', '/MAMP/GitHub/OchParliament/_lib/mPortal/resources/layout.tpl', 98, false),)), $this); ?>
@@ -296,25 +296,7 @@ js/<?php echo $this->_tpl_vars['M']['ID']; ?>
 $this->_smarty_include(array('smarty_include_tpl_file' => ((is_array($_tmp=$this->_tpl_vars['M']['NAME'])) ? $this->_run_mod_handler('cat', true, $_tmp, "-inline.js") : smarty_modifier_cat($_tmp, "-inline.js")), 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?><?php endif; ?>				
-			
-			<?php if ($this->_tpl_vars['M']['google_maps']): ?>
-			<?php echo '
-			var script = document.createElement("script");
-		  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyCWTe-IcZTMpn2HyG3OaTGKla7SY72ddx8&sensor=false&libraries=geometry&callback=_google_maps_initialize";
-		  script.type = "text/javascript";
-		  document.getElementsByTagName("head")[0].appendChild(script);
-			'; ?>
-
-			<?php endif; ?>
-			
-			<?php echo '
-			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-			document.write(unescape("%3Cscript src=\'" + gaJsHost + "google-analytics.com/ga.js\' type=\'text/javascript\'%3E%3C/script%3E"));
-	  </script>
-		<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-3303173-6"); pageTracker._trackPageview(); } catch(err) {}
-		  '; ?>
-  
+ ?><?php endif; ?>							
 		</script>
 		<div id="__LIGHTBOXES">
     </div>

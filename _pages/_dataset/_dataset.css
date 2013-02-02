@@ -1,22 +1,9 @@
 
-#_MAIN_SEARCH_DIV {display: block !important;}
-#_MAIN_SEARCH_DIV_INNER {padding: 8px 0 8px 10px;}
-#_MAIN_SEARCH_PORTAL_MSG {display: none !important;}
-#_MAIN_SEARCH_INPUT {width: 932px;}
-#_MAIN_SEARCH_INPUT {background-color: #CCC; border-color: #AAA; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; padding: 3px 10px 2px; color: #555;}
 
 
 
 
 
-
-
-.s_main_content_container .s_column_main_right.single {margin-left: 5px;}
-body._layout_new .s_wrap {width: 1090px;}
-
-
-
-body._layout_new .s_menu_div ul li.s a {background-color: #444;}
 
 
 
@@ -85,3 +72,24 @@ body._layout_new .s_menu_div ul li.s a {background-color: #444;}
 }
 
 .s_main_content_container .s_column_main_right.single {background-color: #F3F3F3;}
+
+
+
+.dataset_btns_ul {overflow: auto; padding: 15px 11px;}
+.dataset_btns_ul li {float: left; margin: 3px;}
+.dataset_btns_ul li input.mBtn {font-size: 11px; font-weight: bold; padding: 3px 12px 1px;}
+
+.DatasetLBFeature.rss .title {padding: 20px; text-align: center; margin: 5px 0;}
+.DatasetLBFeature.api .title {padding: 10px; text-align: center; margin: 5px 0;}
+.DatasetLBFeature .link {text-align: center; margin-top: 80px;}
+.DatasetLBFeature .input_cont {text-align: center; margin: 5px 0;}
+.DatasetLBFeature .input_cont input {width: 400px; border: 1px solid #CCCCCC;
+    font-size: 13px;
+    margin: 10px;
+    padding: 5px; color: #666;}
+    
+    
+.DatasetLBFeature .desc_div {margin-top: 25px;}
+.DatasetLBFeature .desc_div.first {margin: 0;}
+.DatasetLBFeature .desc_div .title {margin: 0;}
+.DatasetLBFeature .desc_div .param {font-weight: bold; text-align: center;}

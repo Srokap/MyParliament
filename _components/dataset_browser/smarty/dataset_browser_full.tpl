@@ -26,7 +26,7 @@
 						          {if $dataset->fields}
 											<div class="s_browser_order">
 											  {assign var="sort_order" value="DESC"}
-												<p class="sort_label">Sortowanie:</p>
+												<p class="sort_label">Sorting:</p>
 											  <select name="o[]" class="main_select">
 											  
 											    {if $add_sort_fields}
@@ -50,10 +50,10 @@
 											    {/if}
 											  </select>
 											  <select name="o[]">
-											    <option value="DESC"{if $sort_order eq 'DESC'} selected="selected"{/if}>malejąco</option>
-											    <option value="ASC"{if $sort_order eq 'ASC'} selected="selected"{/if}>rosnąco</option>
+											    <option value="DESC"{if $sort_order eq 'DESC'} selected="selected"{/if}>descending</option>
+											    <option value="ASC"{if $sort_order eq 'ASC'} selected="selected"{/if}>ascending</option>
 											  </select>
-											  <input class="mBtn blue s_browser_mbtn" type="submit" value="Sortuj" />
+											  <input class="mBtn blue s_browser_mbtn" type="submit" value="Sort" />
 										  </div>
 										  {/if}
 							      </div>

@@ -1,0 +1,1 @@
+var _dataset = {$dataset->data|@json_encode};
